@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import "./Experiences.css";
-class Experiences extends Component {
+import "./Exp.css";
+class Exp extends Component {
   state = {
     educations: [
       {
@@ -112,4 +112,4 @@ class Experiences extends Component {
   }
 }
 
-export default Experiences;
+export default Exp;
