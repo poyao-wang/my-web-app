@@ -12,14 +12,14 @@ class Profile extends Component {
           <p class="lead">A Self-Taught Programmer.</p>
           <hr className="profile-hr"></hr>
           <Row className="justify-content-center">
-            <Col xs={12} sm={3}>
+            <Col xs={12} sm={2}>
               <h3 className="text-sm-left">About me</h3>
               <p className="text-sm-left">
-                I am a mechanical engineer. Worked in automobile for 4 years. I
-                start stydying programming since 2019.{" "}
+                I am a mechanical engineer. Working in automobile industry. I
+                started stydying programming since 2019.
               </p>
             </Col>
-            <Col xs={12} sm={3}>
+            <Col xs={12} sm={4}>
               <Image
                 roundedCircle
                 className="profile-img"
@@ -27,7 +27,7 @@ class Profile extends Component {
                 alt="Poyao Wang"
               />
             </Col>
-            <Col xs={12} sm={3}>
+            <Col xs={12} sm={2}>
               <h3 className="text-sm-left">Details</h3>
               <p className="text-sm-left">
                 <strong>Name:</strong>
