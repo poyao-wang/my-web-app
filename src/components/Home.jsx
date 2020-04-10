@@ -2,20 +2,24 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Jumbotron, Container, Row, Col, Image, Button } from "react-bootstrap";
 import "./Home.css";
+import Profile from "./Profile";
+import Experiences from "./Experiences";
 
 class Home extends Component {
   state = {};
   render() {
     return (
-      <Container>
+      <Container fluid>
         <Jumbotron>
-          <h2>Welcome to my page!</h2>
+          <h2>Poyao Wang</h2>
           <p>This is the website of Boyo.</p>
           <Link to="About">
             <Button bsStyle="primary">About</Button>
           </Link>
         </Jumbotron>
-        <Row className="show-grid text-center">
+        <Profile />
+        <Experiences />
+        {/* <Row className="show-grid text-center">
           <Col xs={12} sm={4} className="person-wrapper">
             <Image
               src="assets/me1.jpeg"
@@ -43,7 +47,7 @@ class Home extends Component {
             <h3>Australia</h3>
             <p>Working holiday for 1 year.</p>
           </Col>
-        </Row>{" "}
+        </Row>{" "} */}
       </Container>
     );
   }

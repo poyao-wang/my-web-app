@@ -1,0 +1,50 @@
+.profile-img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+.linkedin-btn {
+  width: auto;
+  padding: 0px;
+  border: 0;
+  background-color: rgb(17, 120, 180);
+  color: white;
+}
+
+.linkedin-img {
+  width: 100%;
+  max-width: 15px;
+  height: auto;
+  margin: 5px;
+}
+
+.linkedin-text {
+  color: white;
+  margin: 3px;
+  margin-right: 5px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.linkedin-link {
+  text-decoration: none;
+}
+
+.linkedin-link:hover {
+  text-decoration: none;
+}
+
+.profile-div {
+  background-color: rgb(225, 235, 232);
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+.profile-hr {
+  margin: 40px;
+}

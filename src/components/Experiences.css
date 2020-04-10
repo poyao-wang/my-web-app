@@ -1,0 +1,11 @@
+.exp-div {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.exp-title {
+  text-align: center;
+}
+
+.exp-div.h3 {
+  padding-top: 10em;
+}

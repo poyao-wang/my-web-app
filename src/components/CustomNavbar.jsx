@@ -6,7 +6,7 @@ class CustomNavbar extends Component {
   state = {};
   render() {
     return (
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="sm">
         <Navbar.Brand href="/">BoyoWang</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

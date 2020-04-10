@@ -1,5 +1,10 @@
 .jumbotron {
-  margin-bottom: 4em;
+  /* background-image: url(/assets/me1.jpeg); */
+  text-align: center;
+  background-size: cover;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  margin-bottom: 0;
 }
 .person-wrapper {
   margin-bottom: 2em;
