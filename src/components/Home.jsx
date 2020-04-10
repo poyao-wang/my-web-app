@@ -4,6 +4,7 @@ import { Jumbotron, Container, Row, Col, Image, Button } from "react-bootstrap";
 import "./Home.css";
 import Profile from "./Profile";
 import Exp from "./Exp";
+import Abilities from "./Abilities";
 
 class Home extends Component {
   state = {};
@@ -19,6 +20,7 @@ class Home extends Component {
         </Jumbotron>
         <Profile />
         <Exp />
+        <Abilities />
         {/* <Row className="show-grid text-center">
           <Col xs={12} sm={4} className="person-wrapper">
             <Image
