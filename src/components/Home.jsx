@@ -12,17 +12,17 @@ class Home extends Component {
   render() {
     return (
       <Container fluid>
-        <Jumbotron>
+        <Jumbotron className="main-divs">
           <h2>Poyao Wang</h2>
           <p>This is the website of Boyo.</p>
           <Link to="About">
             <Button className="primary">About</Button>
           </Link>
         </Jumbotron>
-        <Profile className="main-divs" />
-        <Exp className="main-divs" />
-        <Abilities className="main-divs" />
-        <Projects className="main-divs" />
+        <Profile />
+        <Exp />
+        <Abilities />
+        <Projects />
       </Container>
     );
   }
