@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import StarFill from "./icons/StarFill";
+import Star from "./icons/Star";
 import "./Abilities.css";
 
 class Abilities extends Component {
@@ -21,6 +23,8 @@ class Abilities extends Component {
             <h2>Abilities</h2>
             <p class="lead">Learned most of these my myself.</p>
             <hr className="abi-hr"></hr>
+            <StarFill />
+            <Star />
           </Col>
         </Row>
       </Container>
