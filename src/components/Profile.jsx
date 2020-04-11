@@ -10,7 +10,7 @@ class Profile extends Component {
         <Row className="justify-content-center">
           <Col xs={10} sm={8}>
             <h2>Profile</h2>
-            <p class="lead">A Self-Taught Programmer.</p>
+            <p className="lead">A Self-Taught Programmer.</p>
             <hr className="profile-hr"></hr>
           </Col>
         </Row>

@@ -15,7 +15,7 @@ class Home extends Component {
           <h2>Poyao Wang</h2>
           <p>This is the website of Boyo.</p>
           <Link to="About">
-            <Button bsStyle="primary">About</Button>
+            <Button className="primary">About</Button>
           </Link>
         </Jumbotron>
         <Profile />

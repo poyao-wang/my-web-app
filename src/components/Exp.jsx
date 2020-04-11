@@ -69,7 +69,7 @@ class Exp extends Component {
         <Row className="exp-title justify-content-center">
           <Col xs={11} sm={10} md={8}>
             <h2>Experiences</h2>
-            <p class="lead">Working and living in multiple countries.</p>
+            <p className="lead">Working and living in multiple countries.</p>
           </Col>
         </Row>
         {this.expTable("Careers", this.state.careers)}
@@ -87,14 +87,14 @@ class Exp extends Component {
             <h3>{titleText}</h3>
           </Col>
         </Row>
-        {rows.map((education) => this.expTableRow(education))}
+        {rows.map((education, key) => this.expTableRow(education, key))}
       </div>
     );
   }
 
-  expTableRow(rowCont) {
+  expTableRow(rowCont, key) {
     return (
-      <Row className="justify-content-center">
+      <Row className="justify-content-center" key={key}>
         <Col className="exp-table-col" xs={11} sm={10} md={3}>
           <h5>{rowCont.inst}</h5>
           <p>
