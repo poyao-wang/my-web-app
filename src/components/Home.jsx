@@ -19,10 +19,10 @@ class Home extends Component {
             <Button className="primary">About</Button>
           </Link>
         </Jumbotron>
-        <Profile />
-        <Exp />
-        <Abilities />
-        <Projects />
+        <Profile className="main-divs" />
+        <Exp className="main-divs" />
+        <Abilities className="main-divs" />
+        <Projects className="main-divs" />
       </Container>
     );
   }

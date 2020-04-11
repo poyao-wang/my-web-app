@@ -16,7 +16,7 @@ class ProjCard extends Component {
           <p className="card-text">{this.props.cardText}</p>
           <a
             href={this.props.btnLink}
-            className="btn btn-primary"
+            className="btn btn-primary card-btn"
             target="_blank"
           >
             {this.props.btnText}

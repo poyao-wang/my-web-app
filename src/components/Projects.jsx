@@ -28,11 +28,11 @@ class Projects extends Component {
   };
   render() {
     return (
-      <Container fluid className="proj-div">
+      <Container fluid className="proj-div main-divs">
         <Row className="proj-title justify-content-center">
           <Col xs={11} sm={10} md={8}>
             <h2>Projects</h2>
-            <p className="lead">Feel free to browse my work results. :)</p>
+            <p className="lead">Feel free to browse my work results.</p>
             <hr className="proj-hr"></hr>
           </Col>
         </Row>
@@ -61,11 +61,6 @@ class Projects extends Component {
             {lowerHalf.map((project, key) =>
               this.cardWithContent(project, key)
             )}
-          </Col>
-        </Row>
-        <Row className="justify-content-center">
-          <Col xs={xs} sm={sm} md={md} lg={lg}>
-            <hr className="proj-hr"></hr>
           </Col>
         </Row>
       </Container>

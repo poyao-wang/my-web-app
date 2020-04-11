@@ -6,7 +6,7 @@ class Profile extends Component {
   state = {};
   render() {
     return (
-      <Container fluid className="profile-div">
+      <Container fluid className="profile-div main-divs">
         <Row className="justify-content-center">
           <Col xs={10} sm={8}>
             <h2>Profile</h2>

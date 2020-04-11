@@ -10,7 +10,7 @@ class Exp extends Component {
         jobTitle: "Sphecial Researcher",
         time: "2010-2011",
         cont:
-          "• Takeishi and Komiyama's Laboratory • FrontierLab Program Fall 2010",
+          "Takeishi and Komiyama's Laboratory. FrontierLab Program Fall 2010.",
       },
       {
         inst: "National Tsing Hua University",
@@ -27,9 +27,9 @@ class Exp extends Component {
         jobTitle: "Sphecial Researcher",
         time: "Jul 2019 - Present",
         cont:
-          "•Responsible for brake units testing. \n" +
-          "•Brake performance test, functional tests. \n" +
-          "•Testing data analysis, summarising, material making. \n",
+          "Responsible for brake units testing. " +
+          "Brake performance test, functional tests. " +
+          "Test data analysis, summarising, material making. ",
       },
       {
         inst: "Working Holiday in Australia",
@@ -37,20 +37,20 @@ class Exp extends Component {
         jobTitle: "Backpacker",
         time: "Jan 2018 - May 2019",
         cont:
-          "•Experiencing Australian culture and lifestyle." +
-          "•Kitchen hand of Sushi Train (sushi restaurant)." +
-          "•Production line worker in Australian Country Choice (meat factory)",
+          "Experiencing Australian culture and lifestyle. " +
+          "Kitchen hand of Sushi Train (sushi restaurant). " +
+          "Production line worker in Australian Country Choice (meat factory).",
       },
       {
         inst: "Daimler AG",
         subInst: "Mitsubishi Fuso Truck and Bus Corporation",
-        jobTitle: "R & D Engineer - Heavy Duty Engine Testing",
+        jobTitle: "Testing Engineer",
         time: "Apr 2013 - Sep 2016",
         cont:
-          "•Responsible for heavy duty diesel engine dyno testing. \n" +
-          "•Engine performance test, emission test , functional test, and durability test. \n" +
-          "•Testing data analysis, summarising, material making. \n" +
-          "•Test planning, execution. \n",
+          "Responsible for heavy duty diesel engine dyno testing. " +
+          "Engine performance test, emission test , functional test, and durability test. " +
+          "Test data analysis, summarising, material making. " +
+          "Test planning, execution. ",
       },
       {
         inst: "Taiwan (R.O.C) Army",
@@ -58,14 +58,14 @@ class Exp extends Component {
         jobTitle: "Private First Class",
         time: "Nov 2011 - Oct 2012",
         cont:
-          "•Military service of ROC citizens." +
-          "•Accomplished the daily commands and routines.",
+          "Military service of ROC citizens. " +
+          "Accomplished the daily commands and routines.",
       },
     ],
   };
   render() {
     return (
-      <Container fluid className="exp-div">
+      <Container fluid className="exp-div main-divs">
         <Row className="exp-title justify-content-center">
           <Col xs={11} sm={10} md={8}>
             <h2>Experiences</h2>

@@ -39,7 +39,7 @@ class Abilities extends Component {
   };
   render() {
     return (
-      <Container fluid className="abi-div">
+      <Container fluid className="abi-div main-divs">
         <Row className="abi-title justify-content-center">
           <Col xs={8} sm={7} md={8} lg={6}>
             <h2>Abilities</h2>
