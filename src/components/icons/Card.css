@@ -1,0 +1,19 @@
+.card {
+  width: auto;
+  margin: 1em;
+}
+
+.card-text {
+  height: 5em;
+  margin-bottom: 1em;
+}
+
+.card-title {
+  height: 1em;
+  margin-bottom: 1em;
+}
+
+/* .card-img-top {
+  max-width: 100%;
+  height: auto;
+} */

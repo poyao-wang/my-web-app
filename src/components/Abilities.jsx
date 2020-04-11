@@ -44,7 +44,6 @@ class Abilities extends Component {
           <Col xs={8} sm={7} md={8} lg={6}>
             <h2>Abilities</h2>
             <p className="lead">Learned most of these my myself.</p>
-            <hr className="abi-hr"></hr>
           </Col>
         </Row>
         {skillTable("Skills", this.state.skills)}
@@ -67,6 +66,11 @@ function skillTable(h3TitleText, skills) {
     <Container fluid>
       <Row className="justify-content-center">
         <Col xs={xs} sm={sm} md={md} lg={lg}>
+          <hr className="abi-hr"></hr>
+        </Col>
+      </Row>
+      <Row className="justify-content-center">
+        <Col xs={xs} sm={sm} md={md} lg={lg}>
           <h3 className="skill-table-h3 text-md-left">{h3TitleText}</h3>
         </Col>
       </Row>
@@ -80,11 +84,6 @@ function skillTable(h3TitleText, skills) {
           {lowerHalf.map((skill, key) =>
             skillAndRate(skill.name, skill.rate, key)
           )}
-        </Col>
-      </Row>
-      <Row className="justify-content-center">
-        <Col xs={xs} sm={sm} md={md} lg={lg}>
-          <hr className="abi-hr"></hr>
         </Col>
       </Row>
     </Container>

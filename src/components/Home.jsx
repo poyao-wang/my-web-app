@@ -5,6 +5,7 @@ import "./Home.css";
 import Profile from "./Profile";
 import Exp from "./Exp";
 import Abilities from "./Abilities";
+import Projects from "./Projects";
 
 class Home extends Component {
   state = {};
@@ -21,35 +22,7 @@ class Home extends Component {
         <Profile />
         <Exp />
         <Abilities />
-        {/* <Row className="show-grid text-center">
-          <Col xs={12} sm={4} className="person-wrapper">
-            <Image
-              src="assets/me1.jpeg"
-              roundedCircle
-              className="profile-pic"
-            />
-            <h3>Japan</h3>
-            <p>Where I work currently.</p>
-          </Col>
-          <Col xs={12} sm={4} className="person-wrapper">
-            <Image
-              src="assets/me2.jpeg"
-              roundedCircle
-              className="profile-pic"
-            />
-            <h3>Taiwan</h3>
-            <p>Where I come from.</p>
-          </Col>
-          <Col xs={12} sm={4} className="person-wrapper">
-            <Image
-              src="assets/me3.jpeg"
-              roundedCircle
-              className="profile-pic"
-            />
-            <h3>Australia</h3>
-            <p>Working holiday for 1 year.</p>
-          </Col>
-        </Row>{" "} */}
+        <Projects />
       </Container>
     );
   }
