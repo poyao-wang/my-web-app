@@ -6,6 +6,7 @@ import Profile from "./Profile";
 import Exp from "./Exp";
 import Abilities from "./Abilities";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 class Home extends Component {
   state = {};
@@ -23,6 +24,7 @@ class Home extends Component {
         <Exp />
         <Abilities />
         <Projects />
+        <Contact />
       </Container>
     );
   }

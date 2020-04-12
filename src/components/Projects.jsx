@@ -36,12 +36,12 @@ class Projects extends Component {
             <hr className="proj-hr"></hr>
           </Col>
         </Row>
-        {this.cardTable("Haha", this.state.cards)}
+        {this.cardTable(this.state.cards)}
       </Container>
     );
   }
 
-  cardTable(h3TitleText, skills) {
+  cardTable(skills) {
     const amt = Math.ceil(skills.length / 2);
     const upperHalf = skills.slice(0, amt);
     const lowerHalf = skills.slice(amt);
