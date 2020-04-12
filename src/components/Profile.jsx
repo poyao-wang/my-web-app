@@ -25,7 +25,7 @@ class Profile extends Component {
               started stydying programming since 2019.
             </p>
           </Col>
-          <Col xs={10} sm={8} md={4}>
+          <Col xs={10} sm={8} md={3}>
             <Image
               roundedCircle
               className="profile-img"

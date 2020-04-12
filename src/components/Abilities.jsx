@@ -41,7 +41,7 @@ class Abilities extends Component {
     return (
       <Container fluid className="abi-div main-divs">
         <Row className="abi-title justify-content-center">
-          <Col xs={8} sm={7} md={8} lg={6}>
+          <Col xs={8} sm={7} md={9} lg={9}>
             <h2>Abilities</h2>
             <p className="lead">Learned most of these my myself.</p>
           </Col>
@@ -60,8 +60,10 @@ function skillTable(h3TitleText, skills) {
   const lowerHalf = skills.slice(amt);
   const xs = 8;
   const sm = 7;
-  const md = 8;
-  const lg = 6;
+  const mdHalf = 4;
+  const md = mdHalf * 2 + 1;
+  const lgHalf = 4;
+  const lg = lgHalf * 2 + 1;
   return (
     <Container fluid>
       <Row className="justify-content-center">
@@ -75,12 +77,13 @@ function skillTable(h3TitleText, skills) {
         </Col>
       </Row>
       <Row className="justify-content-center">
-        <Col xs={xs} sm={sm} md={md / 2} lg={lg / 2}>
+        <Col xs={xs} sm={sm} md={mdHalf} lg={lgHalf}>
           {upperHalf.map((skill, key) =>
             skillAndRate(skill.name, skill.rate, key)
           )}
         </Col>
-        <Col xs={xs} sm={sm} md={md / 2} lg={lg / 2}>
+        <Col className="d-none d-md-block" md={1} />
+        <Col xs={xs} sm={sm} md={mdHalf} lg={lgHalf}>
           {lowerHalf.map((skill, key) =>
             skillAndRate(skill.name, skill.rate, key)
           )}

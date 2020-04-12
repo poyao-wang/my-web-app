@@ -5,7 +5,14 @@
 }
 
 .exp-table-col {
-  padding: 1em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.exp-table-col-r {
+  padding-left: 3em;
+}
+
+.exp-table-col-l {
   padding-left: 2em;
-  padding-right: 2em;
 }
