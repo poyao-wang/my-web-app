@@ -10,21 +10,22 @@ class Exp extends Component {
         jobTitle: "Sphecial Researcher",
         time: "2010-2011",
         cont:
-          "Takeishi and Komiyama's Laboratory. FrontierLab Program Fall 2010.",
+          "Takeishi and Komiyama's Laboratory. FrontierLab Program Fall 2010. " +
+          "Gas turbine film cooling research.",
       },
       {
         inst: "National Tsing Hua University",
-        subInst: "Power of Mechanical Engineering",
-        jobTitle: "Bachelor's degree",
+        subInst: "School of Engineering",
+        jobTitle: "Power of Mechanical Engineering",
         time: "2006-2011",
-        cont: "Thermo-Fluids Engineering Division",
+        cont: "Bachelor's degree. Thermo-Fluids Engineering Division",
       },
     ],
     careers: [
       {
         inst: "Chassis Brake International",
         subInst: "CBI Japan",
-        jobTitle: "Sphecial Researcher",
+        jobTitle: "Test Engineer",
         time: "Jul 2019 - Present",
         cont:
           "Responsible for brake units testing. " +
@@ -44,7 +45,7 @@ class Exp extends Component {
       {
         inst: "Daimler AG",
         subInst: "Mitsubishi Fuso Truck and Bus Corporation",
-        jobTitle: "Testing Engineer",
+        jobTitle: "Test Engineer",
         time: "Apr 2013 - Sep 2016",
         cont:
           "Responsible for heavy duty diesel engine dyno testing. " +

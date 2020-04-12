@@ -4,7 +4,10 @@ import "./Profile.css";
 
 class Profile extends Component {
   state = {};
+
   render() {
+    const thisYear = new Date();
+    const myAge = thisYear.getFullYear() - 1988;
     return (
       <Container fluid className="profile-div main-divs">
         <Row className="justify-content-center">
@@ -37,9 +40,13 @@ class Profile extends Component {
               <br />
               Poyao Wang
               <br />
+              <strong>Nickname:</strong>
+              <br />
+              Boyo
+              <br />
               <strong>Age:</strong>
               <br />
-              32 years
+              {myAge + " years"}
               <br />
               <strong>Location:</strong>
               <br />

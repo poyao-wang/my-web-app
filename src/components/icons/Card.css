@@ -4,12 +4,12 @@
 }
 
 .card-text {
-  height: 5em;
+  height: 7em;
   margin-bottom: 1em;
 }
 
 .card-title {
-  height: 1em;
+  height: 2em;
   margin-bottom: 1em;
 }
 
@@ -17,8 +17,3 @@
   border-radius: 0.3em;
   width: 8em;
 }
-
-/* .card-img-top {
-  max-width: 100%;
-  height: auto;
-} */

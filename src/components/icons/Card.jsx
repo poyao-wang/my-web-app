@@ -14,13 +14,15 @@ class ProjCard extends Component {
         <div className="card-body">
           <h5 className="card-title">{this.props.cardTitleText}</h5>
           <p className="card-text">{this.props.cardText}</p>
-          <a
-            href={this.props.btnLink}
-            className="btn btn-primary card-btn"
-            target="_blank"
-          >
-            {this.props.btnText}
-          </a>
+          <div className="d-flex justify-content-center">
+            <a
+              href={this.props.btnLink}
+              className="btn btn-primary card-btn"
+              target="_blank"
+            >
+              {this.props.btnText}
+            </a>
+          </div>
         </div>
       </div>
     );
