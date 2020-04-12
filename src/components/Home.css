@@ -2,8 +2,8 @@
   /* background-image: url(/assets/me1.jpeg); */
   text-align: center;
   background-size: cover;
-  padding-top: 6em;
-  padding-bottom: 6em;
+  padding-top: 10em;
+  padding-bottom: 10em;
   margin-bottom: 0;
 }
 
@@ -15,8 +15,8 @@
 }
 
 .main-divs {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 5em;
+  padding-bottom: 10em;
 }
 
 .abi-div,
@@ -26,6 +26,10 @@
 .exp-div,
 .proj-div {
   background-color: rgb(255, 255, 255);
+}
+
+.contact-div {
+  background-color: rgb(177, 177, 177);
 }
 
 h1,

@@ -28,7 +28,7 @@ class Projects extends Component {
   };
   render() {
     return (
-      <Container fluid className="proj-div main-divs">
+      <Container fluid className="proj-div main-divs" id="proj-div">
         <Row className="proj-title justify-content-center">
           <Col xs={11} sm={10} md={8}>
             <h2>Projects</h2>

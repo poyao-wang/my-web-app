@@ -2,7 +2,35 @@
 }
 .contact-title {
   text-align: center;
+  color: rgba(255, 255, 255, 0.872);
+}
+.contact-title-h2 {
+  text-align: center;
+  color: white;
 }
 .contact-hr {
   margin: 40px;
+}
+
+.contact-icon {
+  width: 2em;
+  margin: 1em;
+}
+
+.contact-text {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: larger;
+}
+.contact-btn {
+  color: white;
+  text-decoration: none;
+  text-align: left;
+}
+.contact-btn:hover,
+.contact-btn:visited,
+.contact-btn:hover,
+.contact-btn:active {
+  color: white;
+  opacity: 0.7;
+  text-decoration: none;
 }

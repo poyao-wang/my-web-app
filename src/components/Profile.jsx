@@ -9,7 +9,7 @@ class Profile extends Component {
     const thisYear = new Date();
     const myAge = thisYear.getFullYear() - 1988;
     return (
-      <Container fluid className="profile-div main-divs">
+      <Container fluid className="profile-div main-divs" id="profile-div">
         <Row className="justify-content-center">
           <Col xs={10} sm={8}>
             <h2>Profile</h2>

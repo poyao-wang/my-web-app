@@ -13,12 +13,12 @@ class Home extends Component {
   render() {
     return (
       <Container fluid>
-        <Jumbotron className="main-divs">
+        <Jumbotron id="jumbo">
           <h2>Poyao Wang</h2>
           <p>This is the website of Boyo.</p>
-          <Link to="About">
+          {/* <Link to="About">
             <Button className="primary">About</Button>
-          </Link>
+          </Link> */}
         </Jumbotron>
         <Profile />
         <Exp />

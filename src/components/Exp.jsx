@@ -73,7 +73,7 @@ class Exp extends Component {
   };
   render() {
     return (
-      <Container fluid className="exp-div main-divs">
+      <Container fluid className="exp-div main-divs" id="exp-div">
         <Row className="exp-title justify-content-center">
           <Col xs={11} sm={10} md={9}>
             <h2>Experiences</h2>
