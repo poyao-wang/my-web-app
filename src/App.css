@@ -52,7 +52,8 @@ h3,
 h4,
 h5,
 p,
-.btn {
+.btn,
+#navbar-main {
   font-family: "Roboto Condensed", sans-serif;
 }
 
