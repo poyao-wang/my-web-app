@@ -8,6 +8,7 @@ import Abilities from "./Abilities";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import About from "./About";
+import Skills from "./Skills";
 
 class Home extends Component {
   state = {};
@@ -24,7 +25,8 @@ class Home extends Component {
         <About />
         {/* <Profile /> */}
         {/* <Exp /> */}
-        <Abilities />
+        {/* <Abilities /> */}
+        <Skills />
         <Projects />
         <Contact />
       </Container>
