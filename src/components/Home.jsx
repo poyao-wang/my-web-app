@@ -12,10 +12,10 @@ class Home extends Component {
   state = {};
   render() {
     return (
-      <Container fluid>
+      <Container fluid id="main-container">
         <Jumbotron id="jumbo">
           <h2>Poyao Wang</h2>
-          <p>This is the website of Boyo.</p>
+          <p>Designer / Front-end / Back-end Developer</p>
           {/* <Link to="About">
             <Button className="primary">About</Button>
           </Link> */}

@@ -42,3 +42,7 @@ h3,
 .exp-table-link {
   color: rgb(55, 125, 101);
 }
+
+#main-container {
+  background-color: #f8f8f8;
+}
