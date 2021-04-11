@@ -1,32 +1,31 @@
 import React, { Component } from "react";
+import { Col } from "react-bootstrap";
+
 import "./Card.css";
 
-class ProjCard extends Component {
-  state = {};
-  render() {
-    return (
-      <div className="card">
-        <img
-          className="card-img-top"
-          src={this.props.imgSrc}
-          alt="Card image cap"
-        />
-        <div className="card-body">
-          <h5 className="card-title">{this.props.cardTitleText}</h5>
-          <p className="card-text">{this.props.cardText}</p>
-          <div className="d-flex justify-content-center">
-            <a
-              href={this.props.btnLink}
-              className="btn btn-primary card-btn"
-              target="_blank"
-            >
-              {this.props.btnText}
-            </a>
-          </div>
-        </div>
+function ProjCard({
+  imgSrc,
+  imgOnLeft,
+  cardTitleText,
+  cardText,
+  btnLink,
+  btnText,
+}) {
+  const projCardRowFlex = imgOnLeft ? "flex-sm-row" : "flex-sm-row-reverse";
+  return (
+    <div className={"proj-card d-flex flex-column " + projCardRowFlex}>
+      <div className="proj-card-img-container">
+        <img className="proj-card-img" src={imgSrc} alt="Card image cap" />
       </div>
-    );
-  }
+      <div className="proj-card-body d-flex flex-column justify-content-center align-items-center ">
+        <h5 className="proj-card-title">{cardTitleText}</h5>
+        <p className="proj-card-text">{cardText}</p>
+        <a href={btnLink} className="btn proj-card-btn" target="_blank">
+          {btnText}
+        </a>
+      </div>
+    </div>
+  );
 }
 
 export default ProjCard;

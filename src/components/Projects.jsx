@@ -7,22 +7,28 @@ class Projects extends Component {
   state = {
     cards: [
       {
-        imgSrc: "assets/Project1.jpg",
-        cardTitleText: "This web app / ReactJS",
-        cardText:
-          "This webpage is built by reactJS, combined with " +
-          "Bootstrap, and deployed on Google Cloud.",
+        imgSrc: "assets/project1.png",
+        imgOnLeft: true,
+        cardTitleText: "TabaTImer",
+        cardText: "A simple workout timer\niOS / Android app",
         btnLink: "https://github.com/BoyoWang/my-web-app",
-        btnText: "Github link",
+        btnText: "Learn More",
       },
       {
-        imgSrc: "assets/Project2.jpg",
-        cardTitleText: "Raspberry Pi / Python",
-        cardText:
-          "A motor controller, built on Raspberry Pi, " +
-          "coding in Python, using Tkinter as GUI.",
+        imgSrc: "assets/project2.png",
+        imgOnLeft: false,
+        cardTitleText: "Poyao.Wang",
+        cardText: "This React webpage app\nDeployed on Firebase.",
         btnLink: "https://github.com/BoyoWang/control-box",
-        btnText: "Github link",
+        btnText: "Learn More",
+      },
+      {
+        imgSrc: "assets/project3.png",
+        imgOnLeft: true,
+        cardTitleText: "Motor Controller",
+        cardText: "Raspberry Pi motor controller\nCoded in Python.",
+        btnLink: "https://github.com/BoyoWang/control-box",
+        btnText: "Learn More",
       },
     ],
   };
@@ -31,37 +37,14 @@ class Projects extends Component {
       <Container fluid className="proj-div main-divs" id="proj-div">
         <Row className="proj-title justify-content-center">
           <Col xs={11} sm={10} md={8}>
-            <h2>Projects</h2>
-            <p className="lead">Feel free to browse my work results.</p>
-            <hr className="proj-hr"></hr>
+            <h2>My Works</h2>
+            <p className="lead">Feel free to browse my works on GitHub</p>
           </Col>
         </Row>
-        {this.cardTable(this.state.cards)}
-      </Container>
-    );
-  }
-
-  cardTable(skills) {
-    const amt = Math.ceil(skills.length / 2);
-    const upperHalf = skills.slice(0, amt);
-    const lowerHalf = skills.slice(amt);
-    const xs = 8;
-    const sm = 7;
-    const md = 10;
-    const lg = 8;
-    return (
-      <Container fluid>
-        <Row className="justify-content-center">
-          <Col xs={xs} sm={sm} md={md / 2} lg={lg / 2}>
-            {upperHalf.map((project, key) =>
-              this.cardWithContent(project, key)
-            )}
-          </Col>
-          <Col xs={xs} sm={sm} md={md / 2} lg={lg / 2}>
-            {lowerHalf.map((project, key) =>
-              this.cardWithContent(project, key)
-            )}
-          </Col>
+        <Row className="d-flex flex-column justify-content-center align-items-center">
+          {this.state.cards.map((project, key) =>
+            this.cardWithContent(project, key)
+          )}
         </Row>
       </Container>
     );
@@ -72,6 +55,7 @@ class Projects extends Component {
       <ProjCard
         key={key}
         imgSrc={card.imgSrc}
+        imgOnLeft={card.imgOnLeft}
         cardTitleText={card.cardTitleText}
         cardText={card.cardText}
         btnLink={card.btnLink}
