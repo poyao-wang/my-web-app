@@ -7,6 +7,7 @@ import Exp from "./Exp";
 import Abilities from "./Abilities";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import About from "./About";
 
 class Home extends Component {
   state = {};
@@ -20,8 +21,9 @@ class Home extends Component {
             <Button className="primary">About</Button>
           </Link> */}
         </Jumbotron>
-        <Profile />
-        <Exp />
+        <About />
+        {/* <Profile /> */}
+        {/* <Exp /> */}
         <Abilities />
         <Projects />
         <Contact />
