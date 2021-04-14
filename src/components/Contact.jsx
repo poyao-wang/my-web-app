@@ -24,7 +24,10 @@ class Contact extends Component {
   };
   render() {
     return (
-      <div className="contact-div main-divs d-flex flex-column align-items-center">
+      <div
+        id="contact-div"
+        className="contact-div main-divs d-flex flex-column align-items-center"
+      >
         <h2>Contact</h2>
         <p className="lead">
           Interested in my work?

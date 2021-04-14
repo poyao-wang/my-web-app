@@ -9,7 +9,6 @@ function App() {
   return (
     <Router>
       <div>
-        <CustomNavbar />
         <Route exact path="/" component={Home} />
       </div>
     </Router>

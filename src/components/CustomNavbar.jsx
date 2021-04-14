@@ -6,21 +6,16 @@ class CustomNavbar extends Component {
   state = {};
   render() {
     return (
-      <Navbar
-        bg="light"
-        expand="sm"
-        id="navbar-main"
-        className="navbar-light fixed-top"
-      >
-        <Navbar.Brand href="/">BoyoWang</Navbar.Brand>
+      <Navbar id="navbar-main" className="navbar-dark top">
+        <Navbar.Brand href="/">
+          <img src="/assets/pyLogo-02.png" alt="pyLogo" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#jumbo">Top</Nav.Link>
-            <Nav.Link href="#profile-div">Profile</Nav.Link>
-            <Nav.Link href="#exp-div">Experiences</Nav.Link>
-            <Nav.Link href="#abi-div">Abilities</Nav.Link>
-            <Nav.Link href="#proj-div">Projects</Nav.Link>
+            <Nav.Link href="#skills-div">My Skills</Nav.Link>
+            <Nav.Link href="#proj-div">My Works</Nav.Link>
+            <Nav.Link href="#contact-div">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
