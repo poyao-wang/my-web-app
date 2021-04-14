@@ -14,7 +14,9 @@ class Home extends Component {
         <CustomNavbar />
         <div id="jumbo" className="d-flex  align-items-center flex-column">
           <h1>Poyao Wang</h1>
-          <p>Designer / Front-end / Back-end Developer</p>
+          <p className="h1-subtitle">
+            Designer / Front-end / Back-end Developer
+          </p>
         </div>
         <About />
         <Skills />

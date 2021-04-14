@@ -26,7 +26,16 @@
 
 #jumbo h1 {
   color: white;
-  margin-top: 11%;
+  margin-top: 5%;
+  font-size: 55px;
+}
+
+#jumbo .h1-subtitle {
+  font-size: 15px;
+}
+
+.h2-subtitle {
+  font-size: 20px;
 }
 
 #jumbo p {
@@ -40,14 +49,26 @@
 }
 
 .main-divs {
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 80px;
 }
 
 h1,
 h2,
 h3 {
   color: rgb(65, 145, 118);
+}
+
+h2 {
+  font-size: 40px;
+}
+
+p {
+  line-height: 2;
+}
+
+hr {
+  width: 10vw;
+  margin-bottom: 20px;
 }
 
 #main-container {
@@ -59,7 +80,6 @@ h3 {
     aspect-ratio: 1.8;
   }
   #jumbo h1 {
-    color: white;
     margin-top: 5%;
   }
 }
@@ -81,9 +101,14 @@ h3 {
   #jumbo {
     aspect-ratio: 2.3;
   }
+
   #jumbo h1 {
-    color: white;
-    margin-top: 5%;
+    margin-top: 1%;
+    font-size: 70px;
+  }
+
+  #jumbo .h1-subtitle {
+    font-size: 18px;
   }
 }
 @media (min-width: 992px) {
@@ -106,13 +131,10 @@ h3 {
     background-size: 200%;
   }
   #jumbo h1 {
-    color: white;
-    margin-top: 7%;
+    margin-top: 3%;
   }
 }
 @media (min-width: 1200px) {
-}
-@media (min-width: 1400px) {
   #navbar-main {
     padding: 40px;
   }
@@ -130,7 +152,16 @@ h3 {
     aspect-ratio: 2.7;
   }
   #jumbo h1 {
-    color: white;
-    margin-top: 5%;
+    margin-top: 2%;
+    font-size: 90px;
   }
+  #jumbo .h1-subtitle {
+    font-size: 22px;
+  }
+
+  .main-divs {
+    margin-top: 110px;
+  }
+}
+@media (min-width: 1400px) {
 }

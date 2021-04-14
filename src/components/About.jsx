@@ -10,8 +10,8 @@ class About extends Component {
         <div className="about-div-img-wrapper d-flex justify-content-center align-items-center">
           <img className="about-div-img" src={imagePath} alt="Poyao Wang" />
         </div>
-        <h3 className="text-md">{tilteText}</h3>
-        <p className="text-md">{pText}</p>
+        <h3>{tilteText}</h3>
+        <p>{pText}</p>
       </div>
     );
   }
@@ -21,10 +21,10 @@ class About extends Component {
       <div fluid className="about-div main-divs" id="about-div">
         <div className="justify-content-center">
           <h2>About Me</h2>
-          <p className="lead">A Self-taught Full-Stack Developer</p>
-          <hr className="profile-hr"></hr>
+          <p className="h2-subtitle">A Self-taught Full-Stack Developer</p>
+          <hr />
         </div>
-        <div className="d-flex flex-column flex-sm-row justify-content-center">
+        <div className="d-flex flex-column flex-md-row justify-content-center">
           {this.col(
             "assets/about-div-img1.png",
             "Front-end",

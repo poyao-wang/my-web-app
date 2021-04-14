@@ -23,6 +23,11 @@
   color: white;
 }
 
+.contact-div hr {
+  border-color: white;
+  opacity: 0.5;
+}
+
 .contact-icon {
   width: 60px;
   margin: 30px;

@@ -18,7 +18,7 @@ function ProjCard({
         <img className="proj-card-img" src={imgSrc} alt="Card image cap" />
       </div>
       <div className="proj-card-body d-flex flex-column justify-content-center align-items-center ">
-        <h5 className="proj-card-title">{cardTitleText}</h5>
+        <h3 className="proj-card-title">{cardTitleText}</h3>
         <p className="proj-card-text">{cardText}</p>
         <a href={btnLink} className="btn proj-card-btn" target="_blank">
           {btnText}

@@ -7,7 +7,7 @@
 }
 
 .skill-box p {
-  font-size: 9px;
+  font-size: 10px;
 }
 
 .skills-div {
@@ -40,26 +40,11 @@
     margin: 17px;
   }
   .skill-box p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media (min-width: 1200px) {
 }
 
 @media (min-width: 1400px) {
-  .skill-box {
-    width: 7vw;
-    height: 7.3vw;
-    border-radius: 0.8vw;
-    margin: 1vw;
-  }
-
-  .skill-box p {
-    font-size: 0.8vw;
-  }
-
-  .skill-img {
-    width: 50%;
-    margin: 0.9vw;
-  }
 }

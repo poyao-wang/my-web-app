@@ -36,7 +36,8 @@ class Projects extends Component {
       <div fluid className="proj-div main-divs" id="proj-div">
         <div className="proj-title justify-content-center">
           <h2>My Works</h2>
-          <p className="lead">Feel free to browse my works on GitHub</p>
+          <p className="h2-subtitle">Feel free to browse my works on GitHub</p>
+          <hr />
         </div>
         <div className="d-flex flex-column justify-content-center align-items-center">
           {this.state.cards.map((project, key) =>

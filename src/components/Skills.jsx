@@ -17,7 +17,8 @@ class Skills extends Component {
       <div fluid className="skills-div main-divs" id="skills-div">
         <div className="justify-content-center">
           <h2>My Skills</h2>
-          <p className="lead">JavaScript centered development path</p>
+          <p className="h2-subtitle">JavaScript centered development path</p>
+          <hr />
         </div>
         <div className="d-flex flex-row justify-content-center">
           <div className="d-none d-sm-none d-md-flex justify-content-center align-self-center">

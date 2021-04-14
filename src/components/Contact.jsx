@@ -28,11 +28,12 @@ class Contact extends Component {
         className="contact-div main-divs d-flex flex-column align-items-center"
       >
         <h2>Contact</h2>
-        <p className="lead">
+        <p className="h2-subtitle">
           Interested in my work?
           <br />
           Feel free to contact me.
         </p>
+        <hr />
         <div className="d-flex flex-row justify-content-center align-items-center">
           {this.state.contacts.map((project, key) =>
             this.contactRow(project, key)
