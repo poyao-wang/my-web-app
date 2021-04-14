@@ -1,6 +1,7 @@
 #navbar-main {
   background-color: #309063;
   padding: 20px;
+  padding-left: 10vw;
 }
 
 .nav-link {
@@ -15,27 +16,30 @@
 }
 
 #jumbo {
-  width: 100%;
-  aspect-ratio: 1.4;
+  width: 100vw;
+  height: 80vw;
   text-align: center;
   background: url("/assets/hero-bg.png");
   background-size: 2000px;
   background-repeat: no-repeat;
-  background-position: center 95%;
+  background-position: center 93%;
 }
 
 #jumbo h1 {
   color: white;
-  margin-top: 5%;
+  margin-top: 8%;
   font-size: 55px;
+  letter-spacing: 2px;
 }
 
 #jumbo .h1-subtitle {
-  font-size: 15px;
+  font-size: 14px;
+  margin-top: 1px;
+  letter-spacing: 1.5px;
 }
 
 .h2-subtitle {
-  font-size: 20px;
+  font-size: 17px;
 }
 
 #jumbo p {
@@ -75,9 +79,17 @@ hr {
   background-color: #f8f8f8;
 }
 
+@media (min-width: 490px) {
+  #jumbo {
+    /* aspect-ratio: 1.8; */
+    height: 70vw;
+  }
+}
+
 @media (min-width: 576px) {
   #jumbo {
-    aspect-ratio: 1.8;
+    /* aspect-ratio: 1.8; */
+    height: 55vw;
   }
   #jumbo h1 {
     margin-top: 5%;
@@ -86,11 +98,12 @@ hr {
 @media (min-width: 768px) {
   #navbar-main {
     padding: 30px;
+    padding-left: 15vw;
   }
 
   .nav-link {
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 0px;
+    margin-left: 20px;
     font-size: 18px;
   }
 
@@ -99,26 +112,30 @@ hr {
   }
 
   #jumbo {
-    aspect-ratio: 2.3;
+    /* aspect-ratio: 2.3; */
+    height: 43vw;
   }
 
   #jumbo h1 {
     margin-top: 1%;
     font-size: 70px;
+    letter-spacing: 3px;
   }
 
   #jumbo .h1-subtitle {
     font-size: 18px;
+    letter-spacing: 3px;
   }
 }
 @media (min-width: 992px) {
   #navbar-main {
     padding: 35px;
+    padding-left: 20vw;
   }
 
   .nav-link {
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: 0px;
+    margin-left: 30px;
     font-size: 20px;
   }
 
@@ -127,7 +144,8 @@ hr {
   }
 
   #jumbo {
-    aspect-ratio: 2.5;
+    /* aspect-ratio: 2.5; */
+    height: 40vw;
     background-size: 200%;
   }
   #jumbo h1 {
@@ -137,26 +155,30 @@ hr {
 @media (min-width: 1200px) {
   #navbar-main {
     padding: 40px;
+    padding-left: 22vw;
   }
 
   .nav-link {
-    margin-right: 18px;
-    margin-left: 18px;
-    font-size: 25px;
+    margin-right: 0;
+    margin-left: 2vw;
+    font-size: 23px;
   }
 
   .navbar-brand img {
   }
 
   #jumbo {
-    aspect-ratio: 2.7;
+    /* aspect-ratio: 2.55; */
+    height: 40vw;
   }
   #jumbo h1 {
-    margin-top: 2%;
+    margin-top: 4.7vw;
     font-size: 90px;
+    letter-spacing: 10px;
   }
   #jumbo .h1-subtitle {
     font-size: 22px;
+    letter-spacing: 4px;
   }
 
   .main-divs {

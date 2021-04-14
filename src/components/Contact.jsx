@@ -10,12 +10,12 @@ class Contact extends Component {
         href: "https://www.linkedin.com/in/poyao-wang-33860058/",
       },
       {
-        text: "github",
+        text: "GitHub",
         iconSrc: "assets/github.png",
-        href: "https://www.linkedin.com/in/poyao-wang-33860058/",
+        href: "https://github.com/poyao-wang",
       },
       {
-        text: "Email",
+        text: "E-mail",
         iconSrc: "assets/email.png",
         href: "mailto:poyaowang.taiwan@gmail.com",
       },

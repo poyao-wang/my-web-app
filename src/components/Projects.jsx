@@ -10,7 +10,7 @@ class Projects extends Component {
         imgOnLeft: true,
         cardTitleText: "TabaTImer",
         cardText: "A simple workout timer\niOS / Android app",
-        btnLink: "https://github.com/BoyoWang/my-web-app",
+        btnLink: "https://github.com/poyao-wang/tabatimer",
         btnText: "Learn More",
       },
       {
@@ -18,7 +18,7 @@ class Projects extends Component {
         imgOnLeft: false,
         cardTitleText: "Poyao.Wang",
         cardText: "This React webpage app\nDeployed on Firebase.",
-        btnLink: "https://github.com/BoyoWang/control-box",
+        btnLink: "https://github.com/poyao-wang/my-web-app",
         btnText: "Learn More",
       },
       {
