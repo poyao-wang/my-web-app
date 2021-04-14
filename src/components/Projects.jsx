@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import ProjCard from "./icons/Card";
 import "./Projects.css";
 
@@ -34,19 +33,17 @@ class Projects extends Component {
   };
   render() {
     return (
-      <Container fluid className="proj-div main-divs" id="proj-div">
-        <Row className="proj-title justify-content-center">
-          <Col xs={11} sm={10} md={8}>
-            <h2>My Works</h2>
-            <p className="lead">Feel free to browse my works on GitHub</p>
-          </Col>
-        </Row>
-        <Row className="d-flex flex-column justify-content-center align-items-center">
+      <div fluid className="proj-div main-divs" id="proj-div">
+        <div className="proj-title justify-content-center">
+          <h2>My Works</h2>
+          <p className="lead">Feel free to browse my works on GitHub</p>
+        </div>
+        <div className="d-flex flex-column justify-content-center align-items-center">
           {this.state.cards.map((project, key) =>
             this.cardWithContent(project, key)
           )}
-        </Row>
-      </Container>
+        </div>
+      </div>
     );
   }
 

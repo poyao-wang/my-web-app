@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import "./Contact.css";
 
 class Contact extends Component {
@@ -50,7 +49,7 @@ class Contact extends Component {
         target="blank_"
         className="contact-btn d-flex flex-column align-items-center justify-content-center"
       >
-        <Image className="contact-icon" src={contact.iconSrc} />
+        <img className="contact-icon" src={contact.iconSrc} />
         <span className="contact-text">{contact.text}</span>
       </a>
     );

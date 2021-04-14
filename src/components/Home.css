@@ -40,28 +40,14 @@
 }
 
 .main-divs {
-}
-
-.abi-div,
-.profile-div {
-  background-color: rgb(231, 252, 246);
-}
-.exp-div,
-.proj-div {
-}
-
-.contact-div {
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 h1,
 h2,
-h3,
-.exp-div.h4 {
+h3 {
   color: rgb(65, 145, 118);
-}
-
-.exp-table-link {
-  color: rgb(55, 125, 101);
 }
 
 #main-container {

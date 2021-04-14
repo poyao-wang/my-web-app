@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import "./Skills.css";
 class Skills extends Component {
   state = {};
@@ -7,7 +6,7 @@ class Skills extends Component {
   skillBox(imagePath = null, title = "title") {
     return (
       <div className="skill-box justify-content-center align-self-center">
-        <Image className="skill-img" src={imagePath} alt="Poyao Wang" />
+        <img className="skill-img" src={imagePath} alt="Poyao Wang" />
         <p>{title.toUpperCase()}</p>
       </div>
     );
@@ -15,13 +14,11 @@ class Skills extends Component {
 
   render() {
     return (
-      <Container fluid className="skills-div main-divs" id="skills-div">
-        <Row className="justify-content-center">
-          <Col xs={10} sm={8}>
-            <h2>My Skills</h2>
-            <p className="lead">JavaScript centered development path</p>
-          </Col>
-        </Row>
+      <div fluid className="skills-div main-divs" id="skills-div">
+        <div className="justify-content-center">
+          <h2>My Skills</h2>
+          <p className="lead">JavaScript centered development path</p>
+        </div>
         <div className="d-flex flex-row justify-content-center">
           <div className="d-none d-sm-none d-md-flex justify-content-center align-self-center">
             {this.skillBox("assets/skills/lefter-1.png", "git")}
@@ -43,7 +40,7 @@ class Skills extends Component {
             {this.skillBox("assets/skills/righter-1.png", "Adobe Apps")}
           </div>
         </div>
-      </Container>
+      </div>
     );
   }
 }

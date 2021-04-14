@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 class CustomNavbar extends Component {
   state = {};
@@ -19,41 +18,6 @@ class CustomNavbar extends Component {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      // <nav
-      //   id="navbar-main"
-      //   className="navbar navbar-expand-sm navbar-light bg-light fixed-top"
-      // >
-      //   <a className="navbar-brand" href="/">
-      //     Boyo
-      //   </a>
-      //   <ul className="nav nav-pills">
-      //     <li className="nav-item">
-      //       <a className="nav-link" href="#jumbo">
-      //         Top
-      //       </a>
-      //     </li>
-      //     <li className="nav-item">
-      //       <a className="nav-link" href="#profile-div">
-      //         Profile
-      //       </a>
-      //     </li>
-      //     <li className="nav-item">
-      //       <a className="nav-link" href="#exp-div">
-      //         Experiences
-      //       </a>
-      //     </li>
-      //     <li className="nav-item">
-      //       <a className="nav-link" href="#abi-div">
-      //         Abilities
-      //       </a>
-      //     </li>
-      //     <li className="nav-item">
-      //       <a className="nav-link" href="#proj-div">
-      //         Projects
-      //       </a>
-      //     </li>
-      //   </ul>
-      // </nav>
     );
   }
 }
