@@ -14,14 +14,14 @@ class Home extends Component {
   state = {};
   render() {
     return (
-      <Container fluid id="main-container">
-        <Jumbotron id="jumbo">
-          <h2>Poyao Wang</h2>
+      <div id="main-container">
+        <div id="jumbo" className="d-flex  align-items-center flex-column">
+          <h1>Poyao Wang</h1>
           <p>Designer / Front-end / Back-end Developer</p>
           {/* <Link to="About">
             <Button className="primary">About</Button>
           </Link> */}
-        </Jumbotron>
+        </div>
         <About />
         {/* <Profile /> */}
         {/* <Exp /> */}
@@ -29,7 +29,7 @@ class Home extends Component {
         <Skills />
         <Projects />
         <Contact />
-      </Container>
+      </div>
     );
   }
 }
