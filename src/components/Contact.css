@@ -1,14 +1,14 @@
 .contact-div {
-  padding-top: 15%;
-  padding-bottom: 10%;
+  padding-top: 30%;
   margin-bottom: 0;
+  margin-top: 0;
   width: 100%;
-  aspect-ratio: 1.5;
+  height: 125vw;
   text-align: center;
   background: url("/assets/contact-bg.png");
-  background-size: 2000px;
+  background-size: 300%;
   background-repeat: no-repeat;
-  background-position: center 10%;
+  background-position: center -10vw;
 }
 
 .contact-title {
@@ -53,24 +53,25 @@
 }
 
 @media (min-width: 576px) {
+  .contact-div {
+    height: 600px;
+  }
 }
 @media (min-width: 768px) {
   .contact-div {
-    aspect-ratio: 1.9;
-    background-position: center 8%;
+    height: 650px;
   }
 }
 @media (min-width: 992px) {
   .contact-div {
-    aspect-ratio: 2.1;
-    background-size: 200%;
-    background-position: center 7%;
+    padding-top: 350px;
+    height: 750px;
+    background-size: 2500px;
+    background-position: center -50px;
   }
 }
 @media (min-width: 1200px) {
   .contact-div {
-    aspect-ratio: 2.5;
-    background-position: center 7%;
   }
 }
 @media (min-width: 1400px) {
