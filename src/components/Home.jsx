@@ -100,6 +100,27 @@ const data = {
       },
     ],
   },
+  contacts: {
+    title: "Contact",
+    subtitle: "Interested in my work? Feel free to contact me.",
+    contactIcons: [
+      {
+        text: "Linkedin",
+        iconSrc: "assets/linkedin.png",
+        href: "https://www.linkedin.com/in/poyao-wang-33860058/",
+      },
+      {
+        text: "GitHub",
+        iconSrc: "assets/github.png",
+        href: "https://github.com/poyao-wang",
+      },
+      {
+        text: "E-mail",
+        iconSrc: "assets/email.png",
+        href: "mailto:poyaowang.taiwan@gmail.com",
+      },
+    ],
+  },
 };
 class Home extends Component {
   state = {};
@@ -116,7 +137,7 @@ class Home extends Component {
         <About data={data.about} />
         <Skills data={data.skills} />
         <Projects data={data.projects} />
-        <Contact />
+        <Contact data={data.contacts} />
       </div>
     );
   }

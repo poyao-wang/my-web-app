@@ -1,51 +1,13 @@
 import React, { Component } from "react";
 import "./Contact.css";
 
-class Contact extends Component {
-  state = {
-    contacts: [
-      {
-        text: "Linkedin",
-        iconSrc: "assets/linkedin.png",
-        href: "https://www.linkedin.com/in/poyao-wang-33860058/",
-      },
-      {
-        text: "GitHub",
-        iconSrc: "assets/github.png",
-        href: "https://github.com/poyao-wang",
-      },
-      {
-        text: "E-mail",
-        iconSrc: "assets/email.png",
-        href: "mailto:poyaowang.taiwan@gmail.com",
-      },
-    ],
-  };
-  render() {
-    return (
-      <div
-        id="contact-div"
-        className="contact-div main-divs d-flex flex-column align-items-center"
-      >
-        <h2>Contact</h2>
-        <p className="h2-subtitle">
-          Interested in my work?
-          <br />
-          Feel free to contact me.
-        </p>
-        <hr />
-        <div className="d-flex flex-row justify-content-center align-items-center">
-          {this.state.contacts.map((project, key) =>
-            this.contactRow(project, key)
-          )}
-        </div>
-      </div>
-    );
-  }
+function Contact({ data }) {
+  const contactIcons = data.contactIcons;
 
-  contactRow(contact, key) {
+  function contactIcon(contact, key) {
     return (
       <a
+        key={key}
         href={contact.href}
         target="blank_"
         className="contact-btn d-flex flex-column align-items-center justify-content-center"
@@ -55,6 +17,19 @@ class Contact extends Component {
       </a>
     );
   }
+  return (
+    <div
+      id="contact-div"
+      className="contact-div main-divs d-flex flex-column align-items-center"
+    >
+      <h2>{data.title}</h2>
+      <p className="h2-subtitle">{data.subtitle}</p>
+      <hr />
+      <div className="d-flex flex-row justify-content-center align-items-center">
+        {contactIcons.map((project, key) => contactIcon(project, key))}
+      </div>
+    </div>
+  );
 }
 
 export default Contact;
