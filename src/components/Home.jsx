@@ -14,6 +14,10 @@ const data = {
       { title: "Contact", href: "#contact-div" },
     ],
   },
+  jumbo: {
+    title: "Poyao Wang",
+    subtitle: "Designer / Front-end / Back-end Developer",
+  },
   about: {
     title: "About Me",
     subtitle: "A Self-taught Full-Stack Developer",
@@ -138,9 +142,7 @@ class Home extends Component {
         <CustomNavbar data={data.navBar} />
         <div id="jumbo" className="d-flex  align-items-center flex-column">
           <h1>Poyao Wang</h1>
-          <p className="h1-subtitle">
-            Designer / Front-end / Back-end Developer
-          </p>
+          <p className="h1-subtitle">{data.jumbo.subtitle}</p>
         </div>
         <About data={data.about} />
         <Skills data={data.skills} />
