@@ -7,6 +7,13 @@ import Skills from "./Skills";
 import CustomNavbar from "./CustomNavbar";
 
 const data = {
+  navBar: {
+    mainLinks: [
+      { title: "My Skills", href: "#skills-div" },
+      { title: "My Works", href: "#proj-div" },
+      { title: "Contact", href: "#contact-div" },
+    ],
+  },
   about: {
     title: "About Me",
     subtitle: "A Self-taught Full-Stack Developer",
@@ -122,12 +129,13 @@ const data = {
     ],
   },
 };
+
 class Home extends Component {
   state = {};
   render() {
     return (
       <div id="main-container">
-        <CustomNavbar />
+        <CustomNavbar data={data.navBar} />
         <div id="jumbo" className="d-flex  align-items-center flex-column">
           <h1>Poyao Wang</h1>
           <p className="h1-subtitle">
