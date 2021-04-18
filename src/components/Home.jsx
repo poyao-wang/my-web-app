@@ -70,6 +70,36 @@ const data = {
       },
     },
   },
+  projects: {
+    title: "My Works",
+    subtitle: "Feel free to browse my works on GitHub",
+    cards: [
+      {
+        imgSrc: "assets/project1.png",
+        imgOnLeft: true,
+        cardTitleText: "TabaTImer",
+        cardText: "A simple workout timer\niOS / Android app",
+        btnLink: "https://github.com/poyao-wang/tabatimer",
+        btnText: "Learn More",
+      },
+      {
+        imgSrc: "assets/project2.png",
+        imgOnLeft: false,
+        cardTitleText: "Poyao.Wang",
+        cardText: "This React webpage app\nDeployed on Firebase.",
+        btnLink: "https://github.com/poyao-wang/my-web-app",
+        btnText: "Learn More",
+      },
+      {
+        imgSrc: "assets/project3.png",
+        imgOnLeft: true,
+        cardTitleText: "Motor Controller",
+        cardText: "Raspberry Pi motor controller\nCoded in Python.",
+        btnLink: "https://github.com/BoyoWang/control-box",
+        btnText: "Learn More",
+      },
+    ],
+  },
 };
 class Home extends Component {
   state = {};
@@ -85,7 +115,7 @@ class Home extends Component {
         </div>
         <About data={data.about} />
         <Skills data={data.skills} />
-        <Projects />
+        <Projects data={data.projects} />
         <Contact />
       </div>
     );

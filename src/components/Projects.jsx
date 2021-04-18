@@ -2,53 +2,10 @@ import React, { Component } from "react";
 import ProjCard from "./icons/Card";
 import "./Projects.css";
 
-class Projects extends Component {
-  state = {
-    cards: [
-      {
-        imgSrc: "assets/project1.png",
-        imgOnLeft: true,
-        cardTitleText: "TabaTImer",
-        cardText: "A simple workout timer\niOS / Android app",
-        btnLink: "https://github.com/poyao-wang/tabatimer",
-        btnText: "Learn More",
-      },
-      {
-        imgSrc: "assets/project2.png",
-        imgOnLeft: false,
-        cardTitleText: "Poyao.Wang",
-        cardText: "This React webpage app\nDeployed on Firebase.",
-        btnLink: "https://github.com/poyao-wang/my-web-app",
-        btnText: "Learn More",
-      },
-      {
-        imgSrc: "assets/project3.png",
-        imgOnLeft: true,
-        cardTitleText: "Motor Controller",
-        cardText: "Raspberry Pi motor controller\nCoded in Python.",
-        btnLink: "https://github.com/BoyoWang/control-box",
-        btnText: "Learn More",
-      },
-    ],
-  };
-  render() {
-    return (
-      <div fluid className="proj-div main-divs" id="proj-div">
-        <div className="proj-title justify-content-center">
-          <h2>My Works</h2>
-          <p className="h2-subtitle">Feel free to browse my works on GitHub</p>
-          <hr />
-        </div>
-        <div className="d-flex flex-column justify-content-center align-items-center">
-          {this.state.cards.map((project, key) =>
-            this.cardWithContent(project, key)
-          )}
-        </div>
-      </div>
-    );
-  }
+function Projects({ data }) {
+  const cards = data.cards;
 
-  cardWithContent(card, key) {
+  const cardWithContent = (card, key) => {
     return (
       <ProjCard
         key={key}
@@ -60,7 +17,19 @@ class Projects extends Component {
         btnText={card.btnText}
       />
     );
-  }
+  };
+  return (
+    <div fluid className="proj-div main-divs" id="proj-div">
+      <div className="proj-title justify-content-center">
+        <h2>{data.title}</h2>
+        <p className="h2-subtitle">{data.subtitle}</p>
+        <hr />
+      </div>
+      <div className="d-flex flex-column justify-content-center align-items-center">
+        {cards.map((project, key) => cardWithContent(project, key))}
+      </div>
+    </div>
+  );
 }
 
 export default Projects;
