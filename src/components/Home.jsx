@@ -28,6 +28,48 @@ const data = {
       },
     ],
   },
+  skills: {
+    title: "My Skills",
+    subtitle: "JavaScript centered development path",
+    skillsData: {
+      lefter: {
+        imgSrc: "assets/skills/lefter-1.png",
+        title: "Git",
+      },
+      left1: {
+        imgSrc: "assets/skills/left-1.png",
+        title: "Play Sotre",
+      },
+      left2: {
+        imgSrc: "assets/skills/left-2.png",
+        title: "App Store",
+      },
+      mid1: {
+        imgSrc: "assets/skills/mid-1.png",
+        title: "Node.JS",
+      },
+      mid2: {
+        imgSrc: "assets/skills/mid-2.png",
+        title: "Javascript",
+      },
+      mid3: {
+        imgSrc: "assets/skills/mid-3.png",
+        title: "React",
+      },
+      right1: {
+        imgSrc: "assets/skills/right-1.png",
+        title: "HTML",
+      },
+      right2: {
+        imgSrc: "assets/skills/right-2.png",
+        title: "CSS",
+      },
+      righter: {
+        imgSrc: "assets/skills/righter-1.png",
+        title: "Adobe Apps",
+      },
+    },
+  },
 };
 class Home extends Component {
   state = {};
@@ -42,7 +84,7 @@ class Home extends Component {
           </p>
         </div>
         <About data={data.about} />
-        <Skills />
+        <Skills data={data.skills} />
         <Projects />
         <Contact />
       </div>
