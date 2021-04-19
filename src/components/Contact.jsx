@@ -1,20 +1,27 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import "./Contact.css";
 
 function Contact({ data }) {
   const contactIcons = data.contactIcons;
+  const { t, i18n } = useTranslation();
 
-  function contactIcon(contact, key) {
+  function contactIcon(key) {
     return (
       <a
         key={key}
-        href={contact.href}
+        href={t("contacts.contactIcons." + key + ".href")}
         target="blank_"
         className="contact-btn d-flex flex-column align-items-center justify-content-center"
       >
-        <img className="contact-icon" src={contact.iconSrc} />
-        <span className="contact-text">{contact.text}</span>
+        <img
+          className="contact-icon"
+          src={t("contacts.contactIcons." + key + ".iconSrc")}
+        />
+        <span className="contact-text">
+          {t("contacts.contactIcons." + key + ".text")}
+        </span>
       </a>
     );
   }
@@ -23,11 +30,13 @@ function Contact({ data }) {
       id="contact-div"
       className="contact-div main-divs d-flex flex-column align-items-center"
     >
-      <h2>{data.title}</h2>
-      <p className="h2-subtitle">{data.subtitle}</p>
+      <h2>{t("contacts.title")}</h2>
+      <p className="h2-subtitle">{t("contacts.subtitle")}</p>
       <hr />
       <div className="d-flex flex-row justify-content-center align-items-center">
-        {contactIcons.map((project, key) => contactIcon(project, key))}
+        {contactIcon(0)}
+        {contactIcon(1)}
+        {contactIcon(2)}
       </div>
     </div>
   );

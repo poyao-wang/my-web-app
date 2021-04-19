@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 import "./Home.css";
 import About from "./About";
@@ -135,23 +136,22 @@ const data = {
   },
 };
 
-class Home extends Component {
-  state = {};
-  render() {
-    return (
-      <div id="main-container">
-        <CustomNavbar data={data.navbar} />
-        <div id="jumbo" className="d-flex  align-items-center flex-column">
-          <h1>Poyao Wang</h1>
-          <p className="h1-subtitle">{data.jumbo.subtitle}</p>
-        </div>
-        <About data={data.about} />
-        <Skills data={data.skills} />
-        <Projects data={data.projects} />
-        <Contact data={data.contacts} />
+function Home(props) {
+  const { t, i18n } = useTranslation();
+
+  return (
+    <div id="main-container">
+      <CustomNavbar />
+      <div id="jumbo" className="d-flex  align-items-center flex-column">
+        <h1>Poyao Wang</h1>
+        <p className="h1-subtitle">{t("jumbo.subtitle")}</p>
       </div>
-    );
-  }
+      <About data={data.about} />
+      <Skills data={data.skills} />
+      <Projects data={data.projects} />
+      <Contact data={data.contacts} />
+    </div>
+  );
 }
 
 export default Home;

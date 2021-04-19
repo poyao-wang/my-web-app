@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-function CustomNavbar({ data }) {
-  const mainLinks = data.mainLinks;
+function CustomNavbar(props) {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="navbar-bg d-flex">
       <div className="container">
@@ -11,18 +13,18 @@ function CustomNavbar({ data }) {
           </a>
           <ul id="navbar-main" className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href={mainLinks[0].href}>
-                {mainLinks[0].title}
+              <a className="nav-link" href={t("navbar.mainLinks.0.href")}>
+                {t("navbar.mainLinks.0.title")}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href={mainLinks[1].href}>
-                {mainLinks[1].title}
+              <a className="nav-link" href={t("navbar.mainLinks.1.href")}>
+                {t("navbar.mainLinks.1.title")}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href={mainLinks[2].href}>
-                {mainLinks[2].title}
+              <a className="nav-link" href={t("navbar.mainLinks.2.href")}>
+                {t("navbar.mainLinks.2.title")}
               </a>
             </li>
           </ul>
@@ -41,13 +43,22 @@ function CustomNavbar({ data }) {
             class="dropdown-menu dropdown-menu-right"
             aria-labelledby="navbarDropdown"
           >
-            <a className="dropdown-item" href="#">
+            <a
+              className="dropdown-item"
+              onClick={() => i18n.changeLanguage("en")}
+            >
               English
             </a>
-            <a className="dropdown-item" href="#">
+            <a
+              className="dropdown-item"
+              onClick={() => i18n.changeLanguage("zh")}
+            >
               中　文
             </a>
-            <a className="dropdown-item" href="#">
+            <a
+              className="dropdown-item"
+              onClick={() => i18n.changeLanguage("ja")}
+            >
               日本語
             </a>
           </div>

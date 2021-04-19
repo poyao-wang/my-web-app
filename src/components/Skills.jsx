@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import "./Skills.css";
 
@@ -12,12 +13,13 @@ function Skills({ data }) {
       </div>
     );
   };
+  const { t, i18n } = useTranslation();
 
   return (
     <div fluid className="skills-div main-divs" id="skills-div">
       <div className="justify-content-center">
-        <h2>{data.title}</h2>
-        <p className="h2-subtitle">{data.subtitle}</p>
+        <h2>{t("skills.title")}</h2>
+        <p className="h2-subtitle">{t("skills.subtitle")}</p>
         <hr />
       </div>
       <div className="d-flex flex-row justify-content-center">

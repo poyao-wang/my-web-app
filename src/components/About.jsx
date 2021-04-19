@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./About.css";
 
 function About({ data }) {
   const colsData = data.cols;
+  const { t, i18n } = useTranslation();
 
   const col = (imagePath = null, tilteText = "colTitle", pText = "content") => {
     return (
@@ -19,25 +21,25 @@ function About({ data }) {
   return (
     <div fluid className="about-div main-divs" id="about-div">
       <div className="justify-content-center">
-        <h2>{data.title}</h2>
-        <p className="h2-subtitle">{data.subtitle}</p>
+        <h2>{t("about.title")}</h2>
+        <p className="h2-subtitle">{t("about.subtitle")}</p>
         <hr />
       </div>
       <div className="d-flex flex-column flex-md-row justify-content-center">
         {col(
-          colsData[0].imgSrc,
-          colsData[0].titleText,
-          colsData[0].contentText
+          t("about.cols.0.imgSrc"),
+          t("about.cols.0.titleText"),
+          t("about.cols.0.contentText")
         )}
         {col(
-          colsData[1].imgSrc,
-          colsData[1].titleText,
-          colsData[1].contentText
+          t("about.cols.1.imgSrc"),
+          t("about.cols.1.titleText"),
+          t("about.cols.1.contentText")
         )}
         {col(
-          colsData[2].imgSrc,
-          colsData[2].titleText,
-          colsData[2].contentText
+          t("about.cols.2.imgSrc"),
+          t("about.cols.2.titleText"),
+          t("about.cols.2.contentText")
         )}
       </div>
     </div>
