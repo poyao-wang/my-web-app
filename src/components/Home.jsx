@@ -8,7 +8,7 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 
 const data = {
-  navBar: {
+  navbar: {
     mainLinks: [
       { title: "My Skills", href: "#skills-div" },
       { title: "My Works", href: "#proj-div" },
@@ -118,17 +118,17 @@ const data = {
     contactIcons: [
       {
         text: "Linkedin",
-        iconSrc: "assets/linkedin.png",
+        iconSrc: "assets/contact-linkedin-icon.png",
         href: "https://www.linkedin.com/in/poyao-wang-33860058/",
       },
       {
         text: "GitHub",
-        iconSrc: "assets/github.png",
+        iconSrc: "assets/contact-github-icon.png",
         href: "https://github.com/poyao-wang",
       },
       {
         text: "E-mail",
-        iconSrc: "assets/email.png",
+        iconSrc: "assets/contact-email-icon.png",
         href: "mailto:poyaowang.taiwan@gmail.com",
       },
     ],
@@ -140,7 +140,7 @@ class Home extends Component {
   render() {
     return (
       <div id="main-container">
-        <CustomNavbar data={data.navBar} />
+        <CustomNavbar data={data.navbar} />
         <div id="jumbo" className="d-flex  align-items-center flex-column">
           <h1>Poyao Wang</h1>
           <p className="h1-subtitle">{data.jumbo.subtitle}</p>

@@ -7,7 +7,7 @@ function CustomNavbar({ data }) {
       <div className="container">
         <nav className="navbar navbar-expand navbar-dark d-flex justify-content-between">
           <a href="/" className="navbar-brand">
-            <img src="/assets/pyLogo-02.png" alt="pyLogo" />
+            <img src="/assets/navbar-brand-logo.png" alt="pyLogo" />
           </a>
           <ul id="navbar-main" className="navbar-nav">
             <li className="nav-item">
@@ -35,7 +35,7 @@ function CustomNavbar({ data }) {
             aria-haspopup="true"
             aria-expanded="false"
           >
-            <img src="/assets/language-icon.png" alt="language" />
+            <img src="/assets/navbar-language-icon.png" alt="language" />
           </a>
           <div
             class="dropdown-menu dropdown-menu-right"
