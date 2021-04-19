@@ -57,11 +57,13 @@
     height: 600px;
   }
 }
+
 @media (min-width: 768px) {
   .contact-div {
     height: 650px;
   }
 }
+
 @media (min-width: 992px) {
   .contact-div {
     padding-top: 350px;
@@ -70,9 +72,9 @@
     background-position: center -50px;
   }
 }
+
 @media (min-width: 1200px) {
-  .contact-div {
-  }
 }
+
 @media (min-width: 1400px) {
 }

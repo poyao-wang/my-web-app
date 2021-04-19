@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+
 import "./Home.css";
-import Projects from "./Projects";
-import Contact from "./Contact";
 import About from "./About";
-import Skills from "./Skills";
+import Contact from "./Contact";
 import CustomNavbar from "./CustomNavbar";
+import Projects from "./Projects";
+import Skills from "./Skills";
 
 const data = {
   navBar: {

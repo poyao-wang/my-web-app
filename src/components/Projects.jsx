@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+
 import ProjCard from "./icons/Card";
 import "./Projects.css";
 
@@ -18,6 +19,7 @@ function Projects({ data }) {
       />
     );
   };
+
   return (
     <div fluid className="proj-div main-divs" id="proj-div">
       <div className="proj-title justify-content-center">

@@ -2,9 +2,6 @@
   background-color: #309063;
 }
 
-.navbar {
-}
-
 .nav-item {
   margin: 1vw;
 }
@@ -104,9 +101,6 @@ hr {
   }
 }
 @media (min-width: 768px) {
-  #navbar-main {
-  }
-
   .nav-link {
     font-size: 18px;
   }
@@ -136,9 +130,6 @@ hr {
   }
 }
 @media (min-width: 992px) {
-  #navbar-main {
-  }
-
   .nav-link {
     font-size: 20px;
   }
@@ -161,14 +152,8 @@ hr {
   }
 }
 @media (min-width: 1200px) {
-  #navbar-main {
-  }
-
   .nav-link {
     font-size: 23px;
-  }
-
-  .navbar-brand img {
   }
 
   #jumbo {

@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import "./About.css";
 
 function About({ data }) {
   const colsData = data.cols;
 
   const col = (imagePath = null, tilteText = "colTitle", pText = "content") => {
-    let newText = pText.split("\n").map((item, i) => <p key={i}>{item}</p>);
     return (
       <div className="about-div-col d-flex flex-column justify-content-center align-items-center">
         <div className="about-div-img-wrapper d-flex justify-content-center align-items-center">
