@@ -6,9 +6,9 @@ import Home from "./components/Home";
 import logo from "./logo.svg";
 
 const Loader = () => (
-  <div className="App">
+  <div className="loder d-flex flex-column justify-content-center align-items-center">
     <img src={logo} className="App-logo" alt="logo" />
-    <div>loading...</div>
+    <p>loading...</p>
   </div>
 );
 

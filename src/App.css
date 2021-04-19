@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+.App-logo {
+  height: 80px;
+}
+
+.loder {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
 div.container-fluid {
   padding-left: 0;
   padding-right: 0;
