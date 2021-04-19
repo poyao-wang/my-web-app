@@ -37,6 +37,15 @@ p {
   font-family: "Ubuntu", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+#navbar-main {
+  letter-spacing: 0.1em;
+}
+
 p {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.1em;
 }
