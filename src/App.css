@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 80px;
 }
@@ -10,42 +6,4 @@
   width: 100vw;
   height: 100vh;
   background-color: #f8f8f8;
-}
-
-div.container-fluid {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-h3 {
-  margin-bottom: 0.5em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-.btn,
-#navbar-main {
-  font-family: "Roboto Condensed", sans-serif;
-}
-
-.col,
-p {
-  font-family: "Ubuntu", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-#navbar-main {
-  letter-spacing: 0.1em;
-}
-
-p {
-  margin-bottom: 0.1em;
 }
