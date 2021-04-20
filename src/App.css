@@ -7,3 +7,13 @@
   height: 100vh;
   background-color: #f8f8f8;
 }
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.05em;
+}
+
+p {
+  letter-spacing: 0.05em;
+}

@@ -12,12 +12,12 @@
   },
   "about": {
     "title": "About Me",
-    "subtitle": "A Self-taught Full-Stack Developer",
+    "subtitle": "A Self-taught Full-Stack\u00a0Developer",
     "cols": [
       {
         "imgSrc": "assets/about-div-img1.png",
         "titleText": "Front-end",
-        "contentText": "ReactJS Web App / Mobile App\nHTML / CSS / JavaScript\nAdobe Ps / Ai / Xd"
+        "contentText": "ReactJS Web / Mobile App\nHTML / CSS / JavaScript\nAdobe Ps / Ai / Xd"
       },
       {
         "imgSrc": "assets/about-div-img2.png",
@@ -33,7 +33,7 @@
   },
   "skills": {
     "title": "My Skills",
-    "subtitle": "JavaScript centered development path",
+    "subtitle": "JavaScript centered development\u00a0path",
     "skillsData": {
       "lefter": {
         "imgSrc": "assets/skills/lefter-1.png",
@@ -75,7 +75,7 @@
   },
   "projects": {
     "title": "My Works",
-    "subtitle": "Feel free to browse my works on GitHub",
+    "subtitle": "Feel free to browse my works on\u00a0GitHub",
     "cards": [
       {
         "imgSrc": "assets/project1.png",
@@ -105,7 +105,7 @@
   },
   "contacts": {
     "title": "Contact",
-    "subtitle": "Interested in my work? Feel free to contact me.",
+    "subtitle": "Interested in my work?\nFeel free to contact me.",
     "contactIcons": [
       {
         "text": "Linkedin",

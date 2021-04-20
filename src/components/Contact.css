@@ -23,6 +23,11 @@
   color: white;
 }
 
+.contact-div .h2-subtitle {
+  color: white;
+  white-space: pre-wrap;
+}
+
 .contact-div hr {
   border-color: white;
   opacity: 0.5;
@@ -35,9 +40,10 @@
 }
 
 .contact-text {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 15;
+  font-size: 15px;
+  letter-spacing: 0.1em;
 }
+
 .contact-btn {
   color: white;
   text-decoration: none;
