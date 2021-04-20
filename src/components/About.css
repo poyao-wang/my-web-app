@@ -28,8 +28,8 @@
 
 @media (min-width: 576px) {
   .about-div-img-wrapper {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     margin: 12px;
   }
 
@@ -49,6 +49,7 @@
   .about-div-col {
     margin-right: 17px;
     margin-left: 17px;
+    width: 210px;
   }
 }
 

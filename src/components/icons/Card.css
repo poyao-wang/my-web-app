@@ -64,6 +64,10 @@
     height: 250px;
   }
 
+  .proj-card-title {
+    font-size: 23px;
+  }
+
   .proj-card-text {
   }
 
@@ -90,6 +94,7 @@
   }
 
   .proj-card-title {
+    font-size: 26px;
   }
 
   .proj-card-text {
