@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,105 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Icons */
+
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.icon--about {
+  width: 8rem;
+  height: 8rem;
+}
+
+.icon--skill {
+  width: 4rem;
+  height: 4rem;
+}
+
+.icon--project {
+  width: 15.2rem;
+  height: 15.2rem;
+}
+
+.icon--contact {
+  width: 8rem;
+  height: 8rem;
+}
+
+.icon--translate {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.icon--logo {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .icon--about {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .icon--skill {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .icon--project {
+    width: 15.2rem;
+    height: 15.2rem;
+  }
+
+  .icon--contact {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .icon--translate {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .icon--logo {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .icon--about {
+    width: 8.8rem;
+    height: 8.8rem;
+  }
+
+  .icon--skill {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  .icon--project {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .icon--contact {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .icon--translate {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  .icon--logo {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
 }
