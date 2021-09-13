@@ -34,6 +34,34 @@ code {
     monospace;
 }
 
+h3 {
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: normal;
+  letter-spacing: 0.15rem;
+  color: var(--color-primary);
+}
+
+.p-h3 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.08rem;
+}
+
+@media screen and (min-width: 1024px) {
+  h3 {
+    font-size: 2.5rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.13rem;
+  }
+
+  .p-h3 {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
 .App {
   background-color: var(--color-bg-gray);
   padding: 2rem;
@@ -256,4 +284,40 @@ a {
 
 .btn--secondary {
   background: var(--color-secondary);
+}
+
+/* About Items */
+
+.item-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20.8rem;
+  height: 28.8rem;
+  text-align: center;
+}
+
+.item-about h3 {
+  margin: 0;
+  margin-top: 0.8rem;
+}
+
+.item-about p {
+  margin: 0;
+  margin-top: 0.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .item-about {
+    width: 24.8rem;
+    height: 31.2rem;
+  }
+
+  .item-about h3 {
+    margin-top: 1.6rem;
+  }
+
+  .item-about p {
+    margin-top: 1.6rem;
+  }
 }

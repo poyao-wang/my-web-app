@@ -1,15 +1,14 @@
 import React from 'react';
-import Button from './components/Button';
+import ItemAbout from './components/ItemAbout';
 
 const App: React.FC = () => {
+  const textP = `RESTful API development\nCloud sever deployment\nNodeJS, mongoDB`;
   return (
     <div className="App">
-      <Button href="https://www.google.com/" text="Learn More" type="black" />
-      <Button href="https://www.google.com/" text="Learn More" type="primary" />
-      <Button
-        href="https://www.google.com/"
-        text="Learn More"
-        type="secondary"
+      <ItemAbout
+        iconSrc="assets/about-div-img1.png"
+        textH="Back-End"
+        textP={textP}
       />
     </div>
   );
