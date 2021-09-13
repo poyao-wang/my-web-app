@@ -1,24 +1,15 @@
 import React from 'react';
-import IconWithContainer from './components/IconWithContainer';
+import Button from './components/Button';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <IconWithContainer iconSrc={'assets/about-div-img1.png'} type={'about'} />
-      <IconWithContainer
-        iconSrc={'assets/skills/right-1.png'}
-        type={'skill'}
-        text="HTML"
-      />
-      <IconWithContainer
-        iconSrc={'assets/project1.png'}
-        type={'project'}
-        bgUrl="/assets/proj-card-img-container.png"
-      />
-      <IconWithContainer
-        iconSrc={'assets/contact-github-icon.png'}
-        type={'contact'}
-        text="GitHub"
+      <Button href="https://www.google.com/" text="Learn More" type="black" />
+      <Button href="https://www.google.com/" text="Learn More" type="primary" />
+      <Button
+        href="https://www.google.com/"
+        text="Learn More"
+        type="secondary"
       />
     </div>
   );

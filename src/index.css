@@ -8,6 +8,12 @@
   --color-primary--light: #eaf5f5;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 /* Typography */
 
 html {
@@ -219,4 +225,35 @@ code {
     line-height: 3.2rem;
     letter-spacing: 0.36rem;
   }
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  padding: 0.8rem 1.6rem;
+  width: 20rem;
+  height: 3.2rem;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.btn--black {
+  background: #000000;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
 }
