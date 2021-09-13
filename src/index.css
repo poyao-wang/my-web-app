@@ -7,6 +7,8 @@
   --color-black: #000000;
 }
 
+/* Typography */
+
 html {
   font-size: 62.5%;
 }
@@ -23,6 +25,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  background-color: var(--color-bg-gray);
+  padding: 2rem;
 }
 
 /* Icons */
