@@ -1,14 +1,33 @@
 import React from 'react';
-import ItemAbout from './components/ItemAbout';
+import ItemProject from './components/ItemProject';
 
 const App: React.FC = () => {
-  const textP = `RESTful API development\nCloud sever deployment\nNodeJS, mongoDB`;
+  const textP = `A simple workout timer \n iOS / Android app`;
   return (
     <div className="App">
-      <ItemAbout
-        iconSrc="assets/about-div-img1.png"
-        textH="Back-End"
+      <ItemProject
+        iconSrc="assets/project1.png"
+        iconBgUrl="/assets/proj-card-img-container.png"
+        textH="TabaTimer"
         textP={textP}
+        textBtn="Learn More"
+        hrefBtn="https://www.google.com/"
+      />
+      <ItemProject
+        iconSrc="assets/project1.png"
+        iconBgUrl="/assets/proj-card-img-container.png"
+        textH="TabaTimer"
+        textP={textP}
+        textBtn="Learn More"
+        hrefBtn="https://www.google.com/"
+      />
+      <ItemProject
+        iconSrc="assets/project1.png"
+        iconBgUrl="/assets/proj-card-img-container.png"
+        textH="TabaTimer"
+        textP={textP}
+        textBtn="Learn More"
+        hrefBtn="https://www.google.com/"
       />
     </div>
   );
