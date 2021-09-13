@@ -1,15 +1,25 @@
 import React from 'react';
-import Icon from './components/Icon';
+import IconWithContainer from './components/IconWithContainer';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Icon src={'assets/about-div-img1.png'} type={'about'} />
-      <Icon src={'assets/contact-github-icon.png'} type={'contact'} />
-      <Icon src={'assets/navbar-brand-logo.png'} type={'logo'} />
-      <Icon src={'assets/project1.png'} type={'project'} />
-      <Icon src={'assets/skills/right-1.png'} type={'skill'} />
-      <Icon src={'/assets/navbar-language-icon.png'} type={'translate'} />
+      <IconWithContainer iconSrc={'assets/about-div-img1.png'} type={'about'} />
+      <IconWithContainer
+        iconSrc={'assets/skills/right-1.png'}
+        type={'skill'}
+        text="HTML"
+      />
+      <IconWithContainer
+        iconSrc={'assets/project1.png'}
+        type={'project'}
+        bgUrl="/assets/proj-card-img-container.png"
+      />
+      <IconWithContainer
+        iconSrc={'assets/contact-github-icon.png'}
+        type={'contact'}
+        text="GitHub"
+      />
     </div>
   );
 };

@@ -5,6 +5,7 @@
   --color-bg-gray: #cccccc;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-primary--light: #eaf5f5;
 }
 
 /* Typography */
@@ -130,5 +131,92 @@ code {
   .icon--logo {
     width: 5.6rem;
     height: 5.6rem;
+  }
+}
+
+/* Icons with Container */
+
+.icon-with-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+}
+
+.icon-with-container--about {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 16rem;
+  background: var(--color-white);
+}
+
+.icon-with-container--skill {
+  width: 8.8rem;
+  height: 8.8rem;
+  border-radius: 1.6rem;
+  background: var(--color-white);
+}
+
+.icon-with-container--project {
+  width: 29.6rem;
+  height: 29.6rem;
+}
+
+.icon-with-container--contact {
+  width: 8rem;
+  height: 10.4rem;
+}
+
+.icon-with-container--skill p {
+  margin: 0;
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+}
+
+.icon-with-container--contact p {
+  color: var(--color-primary--light);
+  margin: 0;
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .icon-with-container--about {
+    width: 18.4rem;
+    height: 18.4rem;
+    border-radius: 18.4rem;
+    background: var(--color-white);
+  }
+
+  .icon-with-container--skill {
+    width: 13.6rem;
+    height: 13.6rem;
+    border-radius: 3.2rem;
+  }
+
+  .icon-with-container--project {
+    width: 44rem;
+    height: 44rem;
+  }
+
+  .icon-with-container--contact {
+    width: 12rem;
+    height: 16.8rem;
+  }
+
+  .icon-with-container--skill p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .icon-with-container--contact p {
+    margin-top: 1.6rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.36rem;
   }
 }
