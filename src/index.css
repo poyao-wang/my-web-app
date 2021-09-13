@@ -34,16 +34,30 @@ code {
     monospace;
 }
 
+h2 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: normal;
+  letter-spacing: 0.18rem;
+}
+
 h3 {
   font-size: 3rem;
   line-height: 4rem;
   font-weight: normal;
   letter-spacing: 0.15rem;
-  color: var(--color-primary);
 }
 
 p {
   white-space: pre-wrap;
+}
+
+.p-h2 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.12rem;
+  margin: 0;
+  margin-top: 0.8rem;
 }
 
 .p-h3 {
@@ -52,11 +66,31 @@ p {
   letter-spacing: 0.08rem;
 }
 
+@media screen and (min-width: 768px) {
+  .p-h2 {
+    margin-top: 1.6rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 4rem;
+    line-height: 5.6rem;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+  }
+
   h3 {
     font-size: 2.5rem;
     line-height: 2.4rem;
     letter-spacing: 0.13rem;
+  }
+
+  .p-h2 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.12rem;
+    margin-top: 2.4rem;
   }
 
   .p-h3 {
@@ -304,6 +338,7 @@ a {
 .item-about h3 {
   margin: 0;
   margin-top: 0.8rem;
+  color: var(--color-primary);
 }
 
 .item-about p {
@@ -383,5 +418,49 @@ a {
   .item-project__content {
     width: 44rem;
     height: 44rem;
+  }
+}
+
+/* About Section */
+
+.section-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-about h2 {
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.about-items {
+  margin: 0;
+  margin-top: 4rem;
+}
+
+.about-items .item-about:first-child {
+  margin-top: 0;
+}
+
+.about-items .item-about {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .about-items .item-about {
+    margin: 0px 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-items .item-about {
+    margin: 0px 4rem;
   }
 }
