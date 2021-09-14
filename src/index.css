@@ -464,3 +464,63 @@ a {
     margin: 0px 4rem;
   }
 }
+
+/* Skills Section */
+.section-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-skills h2 {
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.skill-items {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.skill-items__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-items .icon-with-container--skill {
+  margin: 1.2rem;
+}
+
+.skill-items .icon-with-container--skill:first-child {
+  margin-top: 0;
+}
+
+.skill-items .icon-with-container--skill:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .skill-items {
+    margin-top: 5.6rem;
+  }
+
+  .skill-items .icon-with-container--skill {
+    margin: 2.8rem;
+  }
+}
+
+/* Layouts */
+
+.mobile-hide {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-hide {
+    display: inherit;
+  }
+}

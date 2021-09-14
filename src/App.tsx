@@ -1,10 +1,10 @@
 import React from 'react';
-import SectionAbout from './components/SectionAbout';
+import SectionSkills from './components/SectionSkills';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <SectionAbout />
+      <SectionSkills />
     </div>
   );
 };
