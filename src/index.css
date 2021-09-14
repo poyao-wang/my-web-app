@@ -3,6 +3,7 @@
   --color-secondary: #3298a0;
   --color-bg-main: #f8f8f8;
   --color-bg-gray: #cccccc;
+  --color-bg-nav: #309063;
   --color-white: #ffffff;
   --color-black: #000000;
   --color-light: #f3f3f3;
@@ -551,6 +552,66 @@ a {
   }
 }
 
+/* NavBar */
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  padding: 2.4rem;
+  background: var(--color-bg-nav);
+  overflow: visible;
+  z-index: 1;
+}
+
+.nav-bar__translate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.nav-bar__translate .dropdown {
+  margin-top: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-bar {
+    justify-content: center;
+    padding: 4.8rem;
+  }
+
+  .nav-bar__translate {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .nav-bar .nav-items {
+    margin: 0 8.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-bar {
+    padding: 6.4rem;
+  }
+
+  .nav-bar .nav-items {
+    margin: 0 11.2rem;
+  }
+
+  .nav-bar__translate {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  .nav-bar__translate .dropdown {
+    margin-top: 3.2rem;
+  }
+}
+
 /* Hero Section */
 .section-hero {
   display: flex;
@@ -804,6 +865,14 @@ a {
 }
 
 /* Layouts */
+
+.clickable {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
 
 .mobile-hide {
   display: none;
