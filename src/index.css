@@ -141,13 +141,35 @@ p {
   }
 }
 
+/* Main Container */
+
 #main-container {
-  background-color: var(--color-bg-gray);
+  background-color: var(--color-bg-main);
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   width: 100vw;
+}
+
+#main-container > section:first-of-type {
+  margin-top: 0;
+}
+
+#main-container > section {
+  margin-top: 5.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  #main-container > section {
+    margin-top: 8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main-container > section {
+    margin-top: 8.8rem;
+  }
 }
 
 /* Icons */

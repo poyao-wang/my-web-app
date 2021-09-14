@@ -16,7 +16,7 @@ const dummyProjectItem = (
 
 const SectionProjects: React.FC = () => {
   return (
-    <div className="section-projects">
+    <section className="section-projects">
       <h2>My Works</h2>
       <p className="p-h2">A Self-taught Full-Stack Developer</p>
       <div className="project-items">
@@ -24,7 +24,7 @@ const SectionProjects: React.FC = () => {
         {dummyProjectItem}
         {dummyProjectItem}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -10,7 +10,7 @@ const dummyContactItem = (
 );
 const SectionContact: React.FC = () => {
   return (
-    <div
+    <section
       className="section-contact"
       style={{ backgroundImage: 'url(assets/bg-bottom.png)' }}
     >
@@ -23,7 +23,7 @@ const SectionContact: React.FC = () => {
         {dummyContactItem}
         {dummyContactItem}
       </div>
-    </div>
+    </section>
   );
 };
 

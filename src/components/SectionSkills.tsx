@@ -11,7 +11,7 @@ const dummySkillIcon = (
 
 const SectionSkills: React.FC = () => {
   return (
-    <div className="section-skills">
+    <section className="section-skills">
       <h2>About Me</h2>
       <p className="p-h2">A Self-taught Full-Stack Developer</p>
       <div className="skill-items">
@@ -31,7 +31,7 @@ const SectionSkills: React.FC = () => {
         </div>
         <div className="skill-items__col mobile-hide">{dummySkillIcon}</div>
       </div>
-    </div>
+    </section>
   );
 };
 

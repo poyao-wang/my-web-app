@@ -5,7 +5,7 @@ const textP = `RESTful API development\nCloud sever deployment\nNodeJS, mongoDB`
 
 const SectionAbout: React.FC = () => {
   return (
-    <div className="section-about">
+    <section className="section-about">
       <h2>About Me</h2>
       <p className="p-h2">A Self-taught Full-Stack Developer</p>
       <div className="about-items">
@@ -25,7 +25,7 @@ const SectionAbout: React.FC = () => {
           textP={textP}
         />
       </div>
-    </div>
+    </section>
   );
 };
 
