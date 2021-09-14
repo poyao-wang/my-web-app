@@ -1,10 +1,12 @@
 import React from 'react';
-import SectionProjects from './components/SectionProjects';
+import SectionContact from './components/SectionContact';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <SectionProjects />
+      <div id="main-container">
+        <SectionContact />
+      </div>
     </div>
   );
 };
