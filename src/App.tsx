@@ -1,11 +1,11 @@
 import React from 'react';
-import SectionContact from './components/SectionContact';
+import SectionHero from './components/SectionHero';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <div id="main-container">
-        <SectionContact />
+        <SectionHero />
       </div>
     </div>
   );
