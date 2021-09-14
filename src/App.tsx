@@ -1,18 +1,18 @@
 import React from 'react';
-import DropDown from './components/DropDown';
+import NavItems from './components/NavItems';
 
 const dummyItems = [
   //
-  { text: 'English', href: '#' },
-  { text: '中　文', href: '#' },
-  { text: '日本語', href: '#' },
+  { text: 'Skills', href: '#' },
+  { text: 'Works', href: '#' },
+  { text: 'Contact', href: '#' },
 ];
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <div id="main-container">
-        <DropDown items={dummyItems} />
+        <NavItems items={dummyItems} />
       </div>
     </div>
   );

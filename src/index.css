@@ -510,6 +510,47 @@ a {
   }
 }
 
+/* Nav Items */
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav-items a {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.05rem;
+  color: var(--color-white);
+  opacity: 0.5;
+  width: 4rem;
+  margin: 0 0.6rem;
+}
+
+.nav-items a:hover {
+  opacity: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-items a {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.01rem;
+    width: 8rem;
+    margin: 0 2.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-items a {
+    font-size: 3rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.15rem;
+    width: 12rem;
+    margin: 0 3.6rem;
+  }
+}
+
 /* Hero Section */
 .section-hero {
   display: flex;
