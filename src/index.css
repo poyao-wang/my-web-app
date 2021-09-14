@@ -513,6 +513,50 @@ a {
   }
 }
 
+/* Projects Section */
+.section-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-projects h2 {
+  margin: 0;
+  color: var(--color-secondary);
+}
+
+.section-projects h3 {
+  color: var(--color-secondary);
+}
+
+.project-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.project-items .item-project {
+  margin-top: 4rem;
+}
+
+.project-items .item-project:first-child {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .project-items {
+    margin-top: 5.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-items .item-project {
+    margin-top: 4.8rem;
+  }
+}
+
 /* Layouts */
 
 .mobile-hide {
