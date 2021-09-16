@@ -1,19 +1,19 @@
 {
   "navbar": {
-    "mainLinks": [
-      { "title": "技 能", "href": "#skills-div" },
-      { "title": "作 品", "href": "#proj-div" },
-      { "title": "聯絡我", "href": "#contact-div" }
+    "navItems": [
+      { "text": "技 能", "href": "#skills-div" },
+      { "text": "作 品", "href": "#proj-div" },
+      { "text": "聯絡我", "href": "#contact-div" }
     ]
   },
-  "jumbo": {
+  "sectionHero": {
     "title": "Poyao Wang",
     "subtitle": "設計 / 前端 / 後端 開發者"
   },
-  "about": {
+  "sectionAbout": {
     "title": "關於我",
     "subtitle": "自學全端開發者",
-    "cols": [
+    "aboutItems": [
       {
         "imgSrc": "assets/about-div-img1.png",
         "titleText": "前端開發",
@@ -31,10 +31,10 @@
       }
     ]
   },
-  "skills": {
+  "sectionSkills": {
     "title": "技 能",
     "subtitle": "以 JavaScript 為中心的開發路線",
-    "skillsData": {
+    "skillItems": {
       "lefter": {
         "imgSrc": "assets/skills/lefter-1.png",
         "title": "Git"
@@ -73,40 +73,37 @@
       }
     }
   },
-  "projects": {
+  "sectionProjects": {
     "title": "作 品",
     "subtitle": "歡迎於 GitHub 上參觀我的作品",
-    "cards": [
+    "projectItems": [
       {
         "imgSrc": "assets/project1.png",
-        "imgOnLeft": true,
-        "cardTitleText": "TabaTimer",
-        "cardText": "簡潔好看的健身計時器 App\niOS / Android App",
+        "title": "TabaTimer",
+        "text": "簡潔好看的健身計時器 App\niOS / Android App",
         "btnLink": "https://github.com/poyao-wang/tabatimer",
         "btnText": "了解更多"
       },
       {
         "imgSrc": "assets/project2.png",
-        "imgOnLeft": false,
-        "cardTitleText": "Poyao.Wang",
-        "cardText": "此 React 網頁 App \n部署於 Firebase 雲端伺服器",
+        "title": "Poyao.Wang",
+        "text": "此 React 網頁 App \n部署於 Firebase 雲端伺服器",
         "btnLink": "https://github.com/poyao-wang/my-web-app",
         "btnText": "了解更多"
       },
       {
         "imgSrc": "assets/project3.png",
-        "imgOnLeft": true,
-        "cardTitleText": "馬達控制器",
-        "cardText": "Raspberry Pi 馬達控制器\n以 Python 編寫",
+        "title": "馬達控制器",
+        "text": "Raspberry Pi 馬達控制器\n以 Python 編寫",
         "btnLink": "https://github.com/BoyoWang/control-box",
         "btnText": "了解更多"
       }
     ]
   },
-  "contacts": {
+  "sectionContacts": {
     "title": "聯絡我",
     "subtitle": "對於我的作品有興趣嗎？\n歡迎隨時與我聯繫！",
-    "contactIcons": [
+    "contactItems": [
       {
         "text": "Linkedin",
         "iconSrc": "assets/contact-linkedin-icon.png",

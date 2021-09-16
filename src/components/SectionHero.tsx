@@ -10,7 +10,7 @@ const SectionHero: React.FC = () => {
       style={{ backgroundImage: 'url(assets/bg-top.png)' }}
     >
       <h1>Poyao Wang</h1>
-      <p className="p-h1">{t('jumbo.subtitle')}</p>
+      <p className="p-h1">{t('sectionHero.subtitle')}</p>
     </section>
   );
 };

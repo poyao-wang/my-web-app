@@ -1,19 +1,19 @@
 {
   "navbar": {
-    "mainLinks": [
-      { "title": "スキル", "href": "#skills-div" },
-      { "title": "作 品", "href": "#proj-div" },
-      { "title": "連絡先", "href": "#contact-div" }
+    "navItems": [
+      { "text": "スキル", "href": "#skills-div" },
+      { "text": "作 品", "href": "#proj-div" },
+      { "text": "連絡先", "href": "#contact-div" }
     ]
   },
-  "jumbo": {
+  "sectionHero": {
     "title": "Poyao Wang",
     "subtitle": "デザイナー / フロントエンド / バックエンド 開発"
   },
-  "about": {
+  "sectionAbout": {
     "title": "情 報",
     "subtitle": "独学フルスタック開発者",
-    "cols": [
+    "aboutItems": [
       {
         "imgSrc": "assets/about-div-img1.png",
         "titleText": "フロントエンド",
@@ -31,10 +31,10 @@
       }
     ]
   },
-  "skills": {
+  "sectionSkills": {
     "title": "スキル",
     "subtitle": "JavaScript 中心の開発スキル",
-    "skillsData": {
+    "skillItems": {
       "lefter": {
         "imgSrc": "assets/skills/lefter-1.png",
         "title": "Git"
@@ -73,40 +73,37 @@
       }
     }
   },
-  "projects": {
+  "sectionProjects": {
     "title": "作 品",
     "subtitle": "GitHubで作品を自由に閲覧してください",
-    "cards": [
+    "projectItems": [
       {
         "imgSrc": "assets/project1.png",
-        "imgOnLeft": true,
-        "cardTitleText": "TabaTimer",
-        "cardText": "トレーニング用タイマー\niOS / Android アプリ",
+        "title": "TabaTimer",
+        "text": "トレーニング用タイマー\niOS / Android アプリ",
         "btnLink": "https://github.com/poyao-wang/tabatimer",
         "btnText": "詳 細"
       },
       {
         "imgSrc": "assets/project2.png",
-        "imgOnLeft": false,
-        "cardTitleText": "Poyao.Wang",
-        "cardText": "この React Web アプリ\nFirebase に展開",
+        "title": "Poyao.Wang",
+        "text": "この React Web アプリ\nFirebase に展開",
         "btnLink": "https://github.com/poyao-wang/my-web-app",
         "btnText": "詳 細"
       },
       {
         "imgSrc": "assets/project3.png",
-        "imgOnLeft": true,
-        "cardTitleText": "モーター制御",
-        "cardText": "Raspberry Pi コントローラー\nPython でコーディング",
+        "title": "モーター制御",
+        "text": "Raspberry Pi コントローラー\nPython でコーディング",
         "btnLink": "https://github.com/BoyoWang/control-box",
         "btnText": "詳 細"
       }
     ]
   },
-  "contacts": {
+  "sectionContacts": {
     "title": "連絡先",
     "subtitle": "私の作品に興味があります？\nお気軽にご連絡ください。",
-    "contactIcons": [
+    "contactItems": [
       {
         "text": "Linkedin",
         "iconSrc": "assets/contact-linkedin-icon.png",

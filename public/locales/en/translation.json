@@ -1,19 +1,19 @@
 {
   "navbar": {
-    "mainLinks": [
-      { "title": "Skills", "href": "#skills-div" },
-      { "title": "Works", "href": "#proj-div" },
-      { "title": "Contact", "href": "#contact-div" }
+    "navItems": [
+      { "text": "Skills", "href": "#skills-div" },
+      { "text": "Works", "href": "#proj-div" },
+      { "text": "Contact", "href": "#contact-div" }
     ]
   },
-  "jumbo": {
+  "sectionHero": {
     "title": "Poyao Wang",
     "subtitle": "Designer / Front-end / Back-end Developer"
   },
-  "about": {
+  "sectionAbout": {
     "title": "About Me",
     "subtitle": "A Self-taught Full-Stack\u00a0Developer",
-    "cols": [
+    "aboutItems": [
       {
         "imgSrc": "assets/about-div-img1.png",
         "titleText": "Front-end",
@@ -31,10 +31,10 @@
       }
     ]
   },
-  "skills": {
+  "sectionSkills": {
     "title": "My Skills",
     "subtitle": "JavaScript centered development\u00a0path",
-    "skillsData": {
+    "skillItems": {
       "lefter": {
         "imgSrc": "assets/skills/lefter-1.png",
         "title": "Git"
@@ -73,40 +73,37 @@
       }
     }
   },
-  "projects": {
+  "sectionProjects": {
     "title": "My Works",
     "subtitle": "Feel free to browse my works on\u00a0GitHub",
-    "cards": [
+    "projectItems": [
       {
         "imgSrc": "assets/project1.png",
-        "imgOnLeft": true,
-        "cardTitleText": "TabaTimer",
-        "cardText": "A simple workout timer\niOS / Android app",
+        "title": "TabaTimer",
+        "text": "A simple workout timer\niOS / Android app",
         "btnLink": "https://github.com/poyao-wang/tabatimer",
         "btnText": "Learn More"
       },
       {
         "imgSrc": "assets/project2.png",
-        "imgOnLeft": false,
-        "cardTitleText": "Poyao.Wang",
-        "cardText": "This React webpage app\nDeployed on Firebase.",
+        "title": "Poyao.Wang",
+        "text": "This React webpage app\nDeployed on Firebase.",
         "btnLink": "https://github.com/poyao-wang/my-web-app",
         "btnText": "Learn More"
       },
       {
         "imgSrc": "assets/project3.png",
-        "imgOnLeft": true,
-        "cardTitleText": "Motor Controller",
-        "cardText": "Raspberry Pi motor controller\nCoded in Python.",
+        "title": "Motor Controller",
+        "text": "Raspberry Pi motor controller\nCoded in Python.",
         "btnLink": "https://github.com/BoyoWang/control-box",
         "btnText": "Learn More"
       }
     ]
   },
-  "contacts": {
+  "sectionContacts": {
     "title": "Contact",
     "subtitle": "Interested in my work?\nFeel free to contact me.",
-    "contactIcons": [
+    "contactItems": [
       {
         "text": "Linkedin",
         "iconSrc": "assets/contact-linkedin-icon.png",
