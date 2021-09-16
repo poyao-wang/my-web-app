@@ -1,7 +1,13 @@
 import React from 'react';
 
+export interface DropDownItemProps {
+  text: string;
+  href: string;
+  onClick?: () => void;
+}
+
 interface DropDownProps {
-  items: { text: string; href: string }[];
+  items: DropDownItemProps[];
   show?: boolean;
 }
 
@@ -10,7 +16,9 @@ const DropDown: React.FC<DropDownProps> = ({ items, show = false }) => {
   return (
     <div className={className}>
       {items.map((item) => (
-        <a href={item.href}>{item.text}</a>
+        <a onClick={item.onClick} href={item.href}>
+          {item.text}
+        </a>
       ))}
     </div>
   );

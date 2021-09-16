@@ -1,0 +1,127 @@
+{
+  "navbar": {
+    "mainLinks": [
+      { "title": "技 能", "href": "#skills-div" },
+      { "title": "作 品", "href": "#proj-div" },
+      { "title": "聯絡我", "href": "#contact-div" }
+    ]
+  },
+  "jumbo": {
+    "title": "Poyao Wang",
+    "subtitle": "設計 / 前端 / 後端 開發者"
+  },
+  "about": {
+    "title": "關於我",
+    "subtitle": "自學全端開發者",
+    "cols": [
+      {
+        "imgSrc": "assets/about-div-img1.png",
+        "titleText": "前端開發",
+        "contentText": "ReactJS 網站 / 手機 App\nHTML / CSS / JavaScript\nAdobe Ps / Ai / Xd"
+      },
+      {
+        "imgSrc": "assets/about-div-img2.png",
+        "titleText": "後端開發",
+        "contentText": "RESTful API 開發\n雲端伺服器應用\nNodeJS, mongoDB"
+      },
+      {
+        "imgSrc": "assets/about-div-img3.png",
+        "titleText": "語言能力",
+        "contentText": "英文 / 中文 / 日文\n商用英語以上程度\n多國語言 UI 設計"
+      }
+    ]
+  },
+  "skills": {
+    "title": "技 能",
+    "subtitle": "以 JavaScript 為中心的開發路線",
+    "skillsData": {
+      "lefter": {
+        "imgSrc": "assets/skills/lefter-1.png",
+        "title": "Git"
+      },
+      "left1": {
+        "imgSrc": "assets/skills/left-1.png",
+        "title": "Play Sotre"
+      },
+      "left2": {
+        "imgSrc": "assets/skills/left-2.png",
+        "title": "App Store"
+      },
+      "mid1": {
+        "imgSrc": "assets/skills/mid-1.png",
+        "title": "Node.JS"
+      },
+      "mid2": {
+        "imgSrc": "assets/skills/mid-2.png",
+        "title": "Javascript"
+      },
+      "mid3": {
+        "imgSrc": "assets/skills/mid-3.png",
+        "title": "React"
+      },
+      "right1": {
+        "imgSrc": "assets/skills/right-1.png",
+        "title": "HTML"
+      },
+      "right2": {
+        "imgSrc": "assets/skills/right-2.png",
+        "title": "CSS"
+      },
+      "righter": {
+        "imgSrc": "assets/skills/righter-1.png",
+        "title": "Adobe Apps"
+      }
+    }
+  },
+  "projects": {
+    "title": "作 品",
+    "subtitle": "歡迎於 GitHub 上參觀我的作品",
+    "cards": [
+      {
+        "imgSrc": "assets/project1.png",
+        "imgOnLeft": true,
+        "cardTitleText": "TabaTimer",
+        "cardText": "簡潔好看的健身計時器 App\niOS / Android App",
+        "btnLink": "https://github.com/poyao-wang/tabatimer",
+        "btnText": "了解更多"
+      },
+      {
+        "imgSrc": "assets/project2.png",
+        "imgOnLeft": false,
+        "cardTitleText": "Poyao.Wang",
+        "cardText": "此 React 網頁 App \n部署於 Firebase 雲端伺服器",
+        "btnLink": "https://github.com/poyao-wang/my-web-app",
+        "btnText": "了解更多"
+      },
+      {
+        "imgSrc": "assets/project3.png",
+        "imgOnLeft": true,
+        "cardTitleText": "馬達控制器",
+        "cardText": "Raspberry Pi 馬達控制器\n以 Python 編寫",
+        "btnLink": "https://github.com/BoyoWang/control-box",
+        "btnText": "了解更多"
+      }
+    ]
+  },
+  "contacts": {
+    "title": "聯絡我",
+    "subtitle": "對於我的作品有興趣嗎？\n歡迎隨時與我聯繫！",
+    "contactIcons": [
+      {
+        "text": "Linkedin",
+        "iconSrc": "assets/contact-linkedin-icon.png",
+        "href": "https://www.linkedin.com/in/poyao-wang-33860058/"
+      },
+      {
+        "text": "GitHub",
+        "iconSrc": "assets/contact-github-icon.png",
+        "href": "https://github.com/poyao-wang"
+      },
+      {
+        "text": "E-mail",
+        "iconSrc": "assets/contact-email-icon.png",
+        "href": "mailto:poyaowang.taiwan@gmail.com"
+      }
+    ]
+  }
+}

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import DropDown from './DropDown';
+import { useTranslation } from 'react-i18next';
+
+import DropDown, { DropDownItemProps } from './DropDown';
 import Icon from './Icon';
 import NavItems from './NavItems';
 
@@ -9,15 +11,17 @@ const dummyNavItems = [
   { text: 'Works', href: '#' },
   { text: 'Contact', href: '#' },
 ];
-const dummyDropItems = [
-  //
-  { text: 'English', href: '#' },
-  { text: '中　文', href: '#' },
-  { text: '日本語', href: '#' },
-];
 
 const NavBar: React.FC = (props) => {
+  const { t, i18n } = useTranslation();
   const [showDropdown, setShowDropdown] = useState(false);
+
+  const dummyDropItems: DropDownItemProps[] = [
+    //
+    { text: 'English', href: '#', onClick: () => i18n.changeLanguage('en') },
+    { text: '中　文', href: '#', onClick: () => i18n.changeLanguage('zh') },
+    { text: '日本語', href: '#', onClick: () => i18n.changeLanguage('ja') },
+  ];
 
   const handleClick = (): void => {
     setShowDropdown(!showDropdown);
