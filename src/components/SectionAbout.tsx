@@ -1,29 +1,29 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+import * as TypeMainData from '../mainData.model';
 import ItemAbout from './ItemAbout';
 
-const textP = `RESTful API development\nCloud sever deployment\nNodeJS, mongoDB`;
-
 const SectionAbout: React.FC = () => {
+  const { t } = useTranslation();
+
+  const sectionAbout: TypeMainData.SectionAbout = t('sectionAbout', {
+    returnObjects: true,
+  });
+
   return (
     <section className="section-about">
-      <h2>About Me</h2>
-      <p className="p-h2">A Self-taught Full-Stack Developer</p>
+      <h2>{sectionAbout.title}</h2>
+      <p className="p-h2">{sectionAbout.subtitle}</p>
       <div className="about-items">
-        <ItemAbout
-          iconSrc="assets/about-div-img1.png"
-          textH="Back-End"
-          textP={textP}
-        />
-        <ItemAbout
-          iconSrc="assets/about-div-img1.png"
-          textH="Back-End"
-          textP={textP}
-        />
-        <ItemAbout
-          iconSrc="assets/about-div-img1.png"
-          textH="Back-End"
-          textP={textP}
-        />
+        {sectionAbout.aboutItems.map((item, index) => (
+          <ItemAbout
+            key={index}
+            iconSrc={item.imgSrc}
+            textH={item.titleText}
+            textP={item.contentText}
+          />
+        ))}
       </div>
     </section>
   );

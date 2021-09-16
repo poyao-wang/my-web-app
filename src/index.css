@@ -136,7 +136,7 @@ p {
 
   .p-h3 {
     font-size: 1.8rem;
-    line-height: 2.4rem;
+    line-height: 2.8rem;
     letter-spacing: 0.1rem;
   }
 }
@@ -397,7 +397,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20.8rem;
+  width: 25.6rem;
   height: 28.8rem;
   text-align: center;
 }
@@ -415,7 +415,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .item-about {
-    width: 24.8rem;
+    width: 29.6rem;
     height: 31.2rem;
   }
 
