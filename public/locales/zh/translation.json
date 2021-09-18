@@ -1,9 +1,9 @@
 {
   "navbar": {
     "navItems": [
-      { "text": "技 能", "href": "#skills-div" },
-      { "text": "作 品", "href": "#proj-div" },
-      { "text": "聯絡我", "href": "#contact-div" }
+      { "text": "技 能", "href": "#page-home__section-skills" },
+      { "text": "作 品", "href": "#page-home__section-projects" },
+      { "text": "聯絡我", "href": "#page-home__section-contact" }
     ]
   },
   "sectionHero": {

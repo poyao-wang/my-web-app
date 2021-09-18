@@ -2,10 +2,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const SectionHero: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section
+      id="page-home__section-hero"
       className="section-hero"
       style={{ backgroundImage: 'url(assets/bg-top.png)' }}
     >

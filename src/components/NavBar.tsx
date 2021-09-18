@@ -45,7 +45,7 @@ const NavBar: React.FC = (props) => {
 
   return (
     <div className="nav-bar">
-      <a href="https://www.google.com/">
+      <a href="https://poyao.wang/">
         <Icon src={'assets/navbar-brand-logo.png'} type={'logo'} />
       </a>
       <NavItems items={navItems} />

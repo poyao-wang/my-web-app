@@ -12,7 +12,7 @@ const SectionProjects: React.FC = () => {
   });
 
   return (
-    <section className="section-projects">
+    <section id="page-home__section-projects" className="section-projects">
       <h2>{sectionProjects.title}</h2>
       <p className="p-h2">{sectionProjects.subtitle}</p>
       <div className="project-items">

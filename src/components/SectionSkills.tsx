@@ -12,7 +12,7 @@ const SectionSkills: React.FC = () => {
   });
 
   return (
-    <section className="section-skills">
+    <section id="page-home__section-skills" className="section-skills">
       <h2>{sectionSkills.title}</h2>
       <p className="p-h2">{sectionSkills.subtitle}</p>
       <div className="skill-items">

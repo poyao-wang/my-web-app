@@ -1,9 +1,9 @@
 {
   "navbar": {
     "navItems": [
-      { "text": "Skills", "href": "#skills-div" },
-      { "text": "Works", "href": "#proj-div" },
-      { "text": "Contact", "href": "#contact-div" }
+      { "text": "Skills", "href": "#page-home__section-skills" },
+      { "text": "Works", "href": "#page-home__section-projects" },
+      { "text": "Contact", "href": "#page-home__section-contact" }
     ]
   },
   "sectionHero": {

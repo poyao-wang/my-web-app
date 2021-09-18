@@ -13,6 +13,7 @@ const SectionContact: React.FC = () => {
 
   return (
     <section
+      id="page-home__section-contact"
       className="section-contact"
       style={{ backgroundImage: 'url(assets/bg-bottom.png)' }}
     >
@@ -20,7 +21,7 @@ const SectionContact: React.FC = () => {
       <p className="p-h2">{sectionContact.subtitle}</p>
       <div className="contact-items">
         {sectionContact.contactItems.map((item, index) => (
-          <a href={item.href}>
+          <a key={index} href={item.href}>
             <IconWithContainer
               iconSrc={item.iconSrc}
               type={'contact'}

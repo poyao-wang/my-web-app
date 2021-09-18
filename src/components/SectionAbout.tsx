@@ -12,7 +12,7 @@ const SectionAbout: React.FC = () => {
   });
 
   return (
-    <section className="section-about">
+    <section id="page-home__section-about" className="section-about">
       <h2>{sectionAbout.title}</h2>
       <p className="p-h2">{sectionAbout.subtitle}</p>
       <div className="about-items">
