@@ -14,10 +14,29 @@ const NavBar: React.FC = (props) => {
     returnObjects: true,
   });
 
+  const changeLangAndHideDropdown: (langCode: string) => void = (
+    langCode: string
+  ) => {
+    i18n.changeLanguage(langCode);
+    setShowDropdown(false);
+  };
+
   const dropDownItems: DropDownItemProps[] = [
-    { text: 'English', href: '#', onClick: () => i18n.changeLanguage('en') },
-    { text: '中　文', href: '#', onClick: () => i18n.changeLanguage('zh') },
-    { text: '日本語', href: '#', onClick: () => i18n.changeLanguage('ja') },
+    {
+      text: 'English',
+      href: '#',
+      onClick: () => changeLangAndHideDropdown('en'),
+    },
+    {
+      text: '中　文',
+      href: '#',
+      onClick: () => changeLangAndHideDropdown('zh'),
+    },
+    {
+      text: '日本語',
+      href: '#',
+      onClick: () => changeLangAndHideDropdown('ja'),
+    },
   ];
 
   const handleClick = (): void => {
