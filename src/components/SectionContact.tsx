@@ -1,27 +1,33 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+import * as TypeMainData from '../mainData.model';
 import IconWithContainer from './IconWithContainer';
 
-const dummyContactItem = (
-  <IconWithContainer
-    iconSrc={'assets/contact-github-icon.png'}
-    type={'contact'}
-    text="GitHub"
-  />
-);
 const SectionContact: React.FC = () => {
+  const { t } = useTranslation();
+
+  const sectionContact: TypeMainData.SectionContacts = t('sectionContacts', {
+    returnObjects: true,
+  });
+
   return (
     <section
       className="section-contact"
       style={{ backgroundImage: 'url(assets/bg-bottom.png)' }}
     >
-      <h2>Contact</h2>
-      <p className="p-h2">
-        Interested in my work? {'\n'}Feel free to contact me.
-      </p>
+      <h2>{sectionContact.title}</h2>
+      <p className="p-h2">{sectionContact.subtitle}</p>
       <div className="contact-items">
-        {dummyContactItem}
-        {dummyContactItem}
-        {dummyContactItem}
+        {sectionContact.contactItems.map((item, index) => (
+          <a href={item.href}>
+            <IconWithContainer
+              iconSrc={item.iconSrc}
+              type={'contact'}
+              text={item.text}
+            />
+          </a>
+        ))}
       </div>
     </section>
   );
