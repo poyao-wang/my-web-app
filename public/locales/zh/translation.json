@@ -15,16 +15,19 @@
     "subtitle": "自學全端開發者",
     "aboutItems": [
       {
+        "iconAnimeName": "about_front-end",
         "imgSrc": "assets/about-div-img1.png",
         "titleText": "前端開發",
         "contentText": "ReactJS 網站 / 手機 App\nHTML / CSS / JavaScript\nAdobe Ps / Ai / Xd"
       },
       {
+        "iconAnimeName": "about_back-end",
         "imgSrc": "assets/about-div-img2.png",
         "titleText": "後端開發",
         "contentText": "RESTful API 開發\n雲端伺服器應用\nNodeJS, mongoDB"
       },
       {
+        "iconAnimeName": "about_language",
         "imgSrc": "assets/about-div-img3.png",
         "titleText": "語言能力",
         "contentText": "英文 / 中文 / 日文\n商用英語以上程度\n多國語言 UI 設計"

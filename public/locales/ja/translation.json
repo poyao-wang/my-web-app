@@ -15,16 +15,19 @@
     "subtitle": "独学フルスタック開発者",
     "aboutItems": [
       {
+        "iconAnimeName": "about_front-end",
         "imgSrc": "assets/about-div-img1.png",
         "titleText": "フロントエンド",
         "contentText": "Web アプリ / モバイルアプリ\nHTML / CSS / JavaScript\nAdobe Ps / Ai / Xd"
       },
       {
+        "iconAnimeName": "about_back-end",
         "imgSrc": "assets/about-div-img2.png",
         "titleText": "バックエンド",
         "contentText": "RESTful API 開発\nクラウドサーバーへの展開\nNodeJS, mongoDB"
       },
       {
+        "iconAnimeName": "about_language",
         "imgSrc": "assets/about-div-img3.png",
         "titleText": "語学スキル",
         "contentText": "英語 / 中国語 / 日本語\nビジネスレベル以上\n多言語 UI 制作"

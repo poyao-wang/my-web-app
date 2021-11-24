@@ -1,3 +1,5 @@
+import { AnimeName } from './components/IconAnime';
+
 export interface ItemNav {
   text: string;
   href: string;
@@ -13,6 +15,7 @@ export interface SectionHero {
 }
 
 export interface ItemAbout {
+  iconAnimeName: AnimeName;
   imgSrc: string;
   titleText: string;
   contentText: string;

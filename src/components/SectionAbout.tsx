@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import * as TypeMainData from '../mainData.model';
 import ItemAbout from './ItemAbout';
+import { AnimeName } from './IconAnime';
 
 const SectionAbout: React.FC = () => {
   const { t } = useTranslation();
@@ -19,6 +20,7 @@ const SectionAbout: React.FC = () => {
         {sectionAbout.aboutItems.map((item, index) => (
           <ItemAbout
             key={index}
+            iconAnimeName={item.iconAnimeName as AnimeName}
             iconSrc={item.imgSrc}
             textH={item.titleText}
             textP={item.contentText}

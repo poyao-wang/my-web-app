@@ -100,6 +100,12 @@ p {
   .p-h2 {
     margin-top: 1.6rem;
   }
+
+  .p-h3 {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.08rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -180,8 +186,8 @@ p {
 }
 
 .icon--about {
-  width: 8rem;
-  height: 8rem;
+  width: 14.4rem;
+  height: 14.4rem;
 }
 
 .icon--skill {
@@ -211,8 +217,8 @@ p {
 
 @media screen and (min-width: 768px) {
   .icon--about {
-    width: 8rem;
-    height: 8rem;
+    width: 10.4rem;
+    height: 10.4rem;
   }
 
   .icon--skill {
@@ -243,8 +249,8 @@ p {
 
 @media screen and (min-width: 1024px) {
   .icon--about {
-    width: 8.8rem;
-    height: 8.8rem;
+    width: 11.6rem;
+    height: 11.6rem;
   }
 
   .icon--skill {
@@ -284,9 +290,9 @@ p {
 }
 
 .icon-with-container--about {
-  width: 16rem;
-  height: 16rem;
-  border-radius: 16rem;
+  width: 21.2rem;
+  height: 21.2rem;
+  border-radius: 21.2rem;
   background: var(--color-white);
 }
 
@@ -321,6 +327,14 @@ p {
   font-size: 1.5rem;
   line-height: 1.6rem;
   letter-spacing: 0.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .icon-with-container--about {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 16rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -398,7 +412,7 @@ a {
   flex-direction: column;
   align-items: center;
   width: 25.6rem;
-  height: 28.8rem;
+  height: 34rem;
   text-align: center;
 }
 
@@ -413,10 +427,17 @@ a {
   margin-top: 0.8rem;
 }
 
+@media screen and (min-width: 768px) {
+  .item-about {
+    width: 21.6rem;
+    height: 28.8rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .item-about {
     width: 29.6rem;
-    height: 31.2rem;
+    height: 32.4rem;
   }
 
   .item-about h3 {
@@ -719,7 +740,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .about-items .item-about {
-    margin: 0px 4rem;
+    margin: 0px 3rem;
   }
 }
 

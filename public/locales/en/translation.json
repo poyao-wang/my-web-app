@@ -15,16 +15,19 @@
     "subtitle": "A Self-taught Full-Stack\u00a0Developer",
     "aboutItems": [
       {
+        "iconAnimeName": "about_front-end",
         "imgSrc": "assets/about-div-img1.png",
         "titleText": "Front-end",
         "contentText": "ReactJS Web / Mobile App\nHTML / CSS / JavaScript\nAdobe Ps / Ai / Xd"
       },
       {
+        "iconAnimeName": "about_back-end",
         "imgSrc": "assets/about-div-img2.png",
         "titleText": "Back-end",
         "contentText": "RESTful API development\nCloud sever deployment\nNodeJS, mongoDB"
       },
       {
+        "iconAnimeName": "about_language",
         "imgSrc": "assets/about-div-img3.png",
         "titleText": "Languages",
         "contentText": "English / Chinese / Japanese\nBusiness level language skills\nMulti-language UI"
