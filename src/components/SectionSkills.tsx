@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import * as TypeMainData from "../mainData.model";
 import IconWithContainer from "./IconWithContainer";
@@ -10,6 +11,7 @@ const SectionSkills: React.FC = () => {
 
   const tl = useRef<gsap.core.Timeline>();
 
+  const sectionSkillRef = useRef<HTMLDivElement>(null);
   const containerRefLft1 = useRef<HTMLDivElement>(null);
   const containerRefLft2 = useRef<HTMLDivElement>(null);
   const containerRefLtr1 = useRef<HTMLDivElement>(null);
@@ -25,15 +27,17 @@ const SectionSkills: React.FC = () => {
   });
 
   const vars: gsap.TweenVars = {
-    opacity: 0.05,
+    opacity: 0,
     scale: 0.3,
   };
 
   const position = "-=0.43";
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     tl.current = gsap
-      .timeline({ defaults: { duration: 0.5, ease: "elastic.out(1, 0.4)" } })
+      .timeline({ defaults: { duration: 0.5, ease: "back.out(1.7)" } })
       .from(containerRefMid2.current, vars)
       .from(containerRefMid1.current, vars, position)
       .from(containerRefLft1.current, vars, position)
@@ -43,10 +47,24 @@ const SectionSkills: React.FC = () => {
       .from(containerRefRht2.current, vars, position)
       .from(containerRefRtr1.current, vars, position)
       .from(containerRefRht1.current, vars, position);
+
+    ScrollTrigger.create({
+      animation: tl.current,
+      trigger: sectionSkillRef.current,
+      start: "80% bottom",
+      end: "80% 70%",
+      // markers: true,
+      scrub: 0.5,
+      toggleActions: "play pause resume reset",
+    });
   }, []);
 
   return (
-    <section id="page-home__section-skills" className="section-skills">
+    <section
+      id="page-home__section-skills"
+      className="section-skills"
+      ref={sectionSkillRef}
+    >
       <h2>{sectionSkills.title}</h2>
       <p className="p-h2">{sectionSkills.subtitle}</p>
       <div className="skill-items">
