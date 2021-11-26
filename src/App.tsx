@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import PageHome from './components/PageHome';
+import PageHome from "./components/PageHome";
 
 const App: React.FC = () => {
   return (

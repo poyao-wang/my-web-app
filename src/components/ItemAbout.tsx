@@ -1,6 +1,6 @@
-import React from 'react';
-import { AnimeName } from './IconAnime';
-import IconWithContainer from './IconWithContainer';
+import React from "react";
+import { AnimeName } from "./IconAnime";
+import IconWithContainer from "./IconWithContainer";
 
 interface ItemAboutProps {
   iconAnimeName: AnimeName;
@@ -15,7 +15,7 @@ const ItemAbout: React.FC<ItemAboutProps> = ({
   textH,
   textP,
 }) => {
-  const className = 'item-about';
+  const className = "item-about";
   return (
     <div className={className}>
       <IconWithContainer

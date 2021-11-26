@@ -1,14 +1,14 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { useTranslation } from "react-i18next";
 
-import * as TypeMainData from '../mainData.model';
-import ItemAbout from './ItemAbout';
-import { AnimeName } from './IconAnime';
+import * as TypeMainData from "../mainData.model";
+import ItemAbout from "./ItemAbout";
+import { AnimeName } from "./IconAnime";
 
 const SectionAbout: React.FC = () => {
   const { t } = useTranslation();
 
-  const sectionAbout: TypeMainData.SectionAbout = t('sectionAbout', {
+  const sectionAbout: TypeMainData.SectionAbout = t("sectionAbout", {
     returnObjects: true,
   });
 

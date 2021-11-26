@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 interface NavItemsProps {
   items: { text: string; href: string }[];
 }
 
 const NavItems: React.FC<NavItemsProps> = ({ items }) => {
-  const className = 'nav-items';
+  const className = "nav-items";
   return (
     <div className={className}>
       {items.map((item, index) => (

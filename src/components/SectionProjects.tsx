@@ -1,13 +1,13 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { useTranslation } from "react-i18next";
 
-import * as TypeMainData from '../mainData.model';
-import ItemProject from './ItemProject';
+import * as TypeMainData from "../mainData.model";
+import ItemProject from "./ItemProject";
 
 const SectionProjects: React.FC = () => {
   const { t } = useTranslation();
 
-  const sectionProjects: TypeMainData.SectionProjects = t('sectionProjects', {
+  const sectionProjects: TypeMainData.SectionProjects = t("sectionProjects", {
     returnObjects: true,
   });
 

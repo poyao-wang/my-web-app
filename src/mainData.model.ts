@@ -1,4 +1,4 @@
-import { AnimeName } from './components/IconAnime';
+import { AnimeName } from "./components/IconAnime";
 
 export interface ItemNav {
   text: string;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export interface DropDownItemProps {
   text: string;
@@ -12,7 +12,7 @@ interface DropDownProps {
 }
 
 const DropDown: React.FC<DropDownProps> = ({ items, show = false }) => {
-  const className = show ? 'dropdown' : 'dropdown hide';
+  const className = show ? "dropdown" : "dropdown hide";
   return (
     <div className={className}>
       {items.map((item, index) => (

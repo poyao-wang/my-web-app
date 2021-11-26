@@ -1,6 +1,6 @@
-import React from 'react';
-import IconWithContainer from './IconWithContainer';
-import Button from './Button';
+import React from "react";
+import IconWithContainer from "./IconWithContainer";
+import Button from "./Button";
 
 interface ItemProjectProps {
   iconSrc: string;
