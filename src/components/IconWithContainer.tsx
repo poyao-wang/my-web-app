@@ -4,7 +4,7 @@ import Icon from "./Icon";
 import IconAnime, { AnimeName } from "./IconAnime";
 
 interface IconWithContainerProps {
-  animeRef?: RefObject<HTMLDivElement>;
+  iconContainerDivRef?: RefObject<HTMLDivElement>;
   iconAnimeName?: AnimeName;
   iconSrc: string;
   bgUrl?: string;
@@ -13,7 +13,7 @@ interface IconWithContainerProps {
 }
 
 const IconWithContainer: React.FC<IconWithContainerProps> = ({
-  animeRef,
+  iconContainerDivRef,
   iconAnimeName,
   iconSrc,
   type,
@@ -31,7 +31,7 @@ const IconWithContainer: React.FC<IconWithContainerProps> = ({
     <div
       className={className}
       style={{ backgroundImage: `url(${bgUrl})` }}
-      ref={animeRef}
+      ref={iconContainerDivRef}
     >
       {iconReturn(iconAnimeName)}
       {text && <p>{text}</p>}

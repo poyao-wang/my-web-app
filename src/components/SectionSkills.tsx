@@ -71,7 +71,7 @@ const SectionSkills: React.FC = () => {
         <div className="skill-items__col mobile-hide">
           {
             <IconWithContainer
-              animeRef={containerRefLtr1}
+              iconContainerDivRef={containerRefLtr1}
               type={"skill"}
               iconSrc={sectionSkills.skillItems.lefter.imgSrc}
               text={sectionSkills.skillItems.lefter.title}
@@ -81,7 +81,7 @@ const SectionSkills: React.FC = () => {
         <div className="skill-items__col">
           {
             <IconWithContainer
-              animeRef={containerRefLft1}
+              iconContainerDivRef={containerRefLft1}
               type={"skill"}
               iconSrc={sectionSkills.skillItems.left1.imgSrc}
               text={sectionSkills.skillItems.left1.title}
@@ -89,7 +89,7 @@ const SectionSkills: React.FC = () => {
           }
           {
             <IconWithContainer
-              animeRef={containerRefLft2}
+              iconContainerDivRef={containerRefLft2}
               type={"skill"}
               iconSrc={sectionSkills.skillItems.left2.imgSrc}
               text={sectionSkills.skillItems.left2.title}
@@ -99,7 +99,7 @@ const SectionSkills: React.FC = () => {
         <div className="skill-items__col">
           {
             <IconWithContainer
-              animeRef={containerRefMid1}
+              iconContainerDivRef={containerRefMid1}
               type={"skill"}
               iconSrc={sectionSkills.skillItems.mid1.imgSrc}
               text={sectionSkills.skillItems.mid1.title}
@@ -107,7 +107,7 @@ const SectionSkills: React.FC = () => {
           }
           {
             <IconWithContainer
-              animeRef={containerRefMid2}
+              iconContainerDivRef={containerRefMid2}
               type={"skill"}
               iconSrc={sectionSkills.skillItems.mid2.imgSrc}
               text={sectionSkills.skillItems.mid2.title}
@@ -115,7 +115,7 @@ const SectionSkills: React.FC = () => {
           }
           {
             <IconWithContainer
-              animeRef={containerRefMid3}
+              iconContainerDivRef={containerRefMid3}
               type={"skill"}
               iconSrc={sectionSkills.skillItems.mid3.imgSrc}
               text={sectionSkills.skillItems.mid3.title}
@@ -125,7 +125,7 @@ const SectionSkills: React.FC = () => {
         <div className="skill-items__col">
           {
             <IconWithContainer
-              animeRef={containerRefRht1}
+              iconContainerDivRef={containerRefRht1}
               type={"skill"}
               iconSrc={sectionSkills.skillItems.right1.imgSrc}
               text={sectionSkills.skillItems.right1.title}
@@ -133,7 +133,7 @@ const SectionSkills: React.FC = () => {
           }
           {
             <IconWithContainer
-              animeRef={containerRefRht2}
+              iconContainerDivRef={containerRefRht2}
               type={"skill"}
               iconSrc={sectionSkills.skillItems.right2.imgSrc}
               text={sectionSkills.skillItems.right2.title}
@@ -143,7 +143,7 @@ const SectionSkills: React.FC = () => {
         <div className="skill-items__col mobile-hide">
           {
             <IconWithContainer
-              animeRef={containerRefRtr1}
+              iconContainerDivRef={containerRefRtr1}
               type={"skill"}
               iconSrc={sectionSkills.skillItems.righter.imgSrc}
               text={sectionSkills.skillItems.righter.title}
