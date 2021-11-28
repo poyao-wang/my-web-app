@@ -7,19 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import lottie, { AnimationItem } from "lottie-web";
 import { AnimeName } from "../mainData.model";
-
-const loadAnimationData = (AnimeName: AnimeName) => {
-  switch (AnimeName) {
-    case "about_back-end":
-      return require("../assets/animations/about_back-end.json");
-    case "about_front-end":
-      return require("../assets/animations/about_front-end.json");
-    case "about_language":
-      return require("../assets/animations/about_language.json");
-    case "project_tabatimer":
-      return require("../assets/animations/project_tabatimer.json");
-  }
-};
+import animeFns from "../utils/animeFns";
 
 const SectionAbout: React.FC = () => {
   const { t } = useTranslation();
@@ -27,11 +15,10 @@ const SectionAbout: React.FC = () => {
   const sectionAbout: TypeMainData.SectionAbout = t("sectionAbout", {
     returnObjects: true,
   });
-
   const createLottieAnime = (animeDivId: string, animeName: AnimeName) => {
     return lottie.loadAnimation({
       container: document.getElementById(animeDivId)!,
-      animationData: loadAnimationData(animeName),
+      animationData: animeFns.loadAnimationData(animeName),
       renderer: "svg", // "canvas", "html"
       loop: true, // boolean
       autoplay: true, // boolean
