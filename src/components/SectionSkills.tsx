@@ -57,7 +57,7 @@ const SectionSkills: React.FC = () => {
       scrub: 0.5,
       toggleActions: "play pause resume reset",
     });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <section
