@@ -1,8 +1,9 @@
 import React from "react";
-import { AnimeName } from "./IconAnime";
-import IconWithContainer from "./IconWithContainer";
+import { AnimeName } from "../mainData.model";
+import IconWithContainerAnime from "./IconWithContainerAnime";
 
 interface ItemAboutProps {
+  index: number;
   iconAnimeName: AnimeName;
   iconSrc: string;
   textH: string;
@@ -10,6 +11,7 @@ interface ItemAboutProps {
 }
 
 const ItemAbout: React.FC<ItemAboutProps> = ({
+  index,
   iconAnimeName,
   iconSrc,
   textH,
@@ -18,10 +20,9 @@ const ItemAbout: React.FC<ItemAboutProps> = ({
   const className = "item-about";
   return (
     <div className={className}>
-      <IconWithContainer
-        iconSrc={iconSrc}
+      <IconWithContainerAnime
         type="about"
-        iconAnimeName={iconAnimeName}
+        animeDivId={"about-anime-" + index}
       />
       <h3>{textH}</h3>
       <p className="p-h3">{textP}</p>

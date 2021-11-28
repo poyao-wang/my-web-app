@@ -1,4 +1,8 @@
-import { AnimeName } from "./components/IconAnime";
+export type AnimeName =
+  | "about_front-end"
+  | "about_back-end"
+  | "about_language"
+  | "project_tabatimer";
 
 export interface ItemNav {
   text: string;
