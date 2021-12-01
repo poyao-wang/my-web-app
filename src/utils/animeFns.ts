@@ -10,6 +10,8 @@ const loadAnimationData = (AnimeName: AnimeName) => {
       return require("../assets/animations/about_language.json");
     case "project_tabatimer":
       return require("../assets/animations/project_tabatimer.json");
+    case "project_poyao-dot-wang":
+      return require("../assets/animations/project_poyao-dot-wang.json");
   }
 };
 

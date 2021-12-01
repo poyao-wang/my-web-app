@@ -2,7 +2,8 @@ export type AnimeName =
   | "about_front-end"
   | "about_back-end"
   | "about_language"
-  | "project_tabatimer";
+  | "project_tabatimer"
+  | "project_poyao-dot-wang";
 
 export interface ItemNav {
   text: string;
@@ -55,6 +56,7 @@ export interface SectionSkills {
 }
 
 export interface ItemProject {
+  iconAnimeName: AnimeName;
   imgSrc: string;
   title: string;
   text: string;

@@ -81,6 +81,7 @@
     "subtitle": "Feel free to browse my works on\u00a0GitHub",
     "projectItems": [
       {
+        "iconAnimeName": "project_tabatimer",
         "imgSrc": "assets/project1.png",
         "title": "TabaTimer",
         "text": "A simple workout timer\niOS / Android app",
@@ -88,17 +89,11 @@
         "btnText": "Learn More"
       },
       {
+        "iconAnimeName": "project_poyao-dot-wang",
         "imgSrc": "assets/project2.png",
         "title": "Poyao.Wang",
         "text": "This React webpage app\nDeployed on Firebase.",
         "btnLink": "https://github.com/poyao-wang/my-web-app",
-        "btnText": "Learn More"
-      },
-      {
-        "imgSrc": "assets/project3.png",
-        "title": "Motor Controller",
-        "text": "Raspberry Pi motor controller\nCoded in Python.",
-        "btnLink": "https://github.com/BoyoWang/control-box",
         "btnText": "Learn More"
       }
     ]

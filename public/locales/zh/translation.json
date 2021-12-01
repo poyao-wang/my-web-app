@@ -81,6 +81,7 @@
     "subtitle": "歡迎於 GitHub 上參觀我的作品",
     "projectItems": [
       {
+        "iconAnimeName": "project_tabatimer",
         "imgSrc": "assets/project1.png",
         "title": "TabaTimer",
         "text": "簡潔好看的健身計時器 App\niOS / Android App",
@@ -88,17 +89,11 @@
         "btnText": "了解更多"
       },
       {
+        "iconAnimeName": "project_poyao-dot-wang",
         "imgSrc": "assets/project2.png",
         "title": "Poyao.Wang",
         "text": "此 React 網頁 App \n部署於 Firebase 雲端伺服器",
         "btnLink": "https://github.com/poyao-wang/my-web-app",
-        "btnText": "了解更多"
-      },
-      {
-        "imgSrc": "assets/project3.png",
-        "title": "馬達控制器",
-        "text": "Raspberry Pi 馬達控制器\n以 Python 編寫",
-        "btnLink": "https://github.com/BoyoWang/control-box",
         "btnText": "了解更多"
       }
     ]
