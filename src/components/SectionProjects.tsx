@@ -67,16 +67,21 @@ const SectionProjects: React.FC = () => {
     triggerDivId: string,
     lottieAnime: AnimationItem
   ) => {
+    const playMainSegment = () => {
+      if (lottieAnime.firstFrame !== 25) {
+        lottieAnime.loop = false;
+        lottieAnime.playSegments([25, 150], true);
+      }
+    };
+
     ScrollTrigger.create({
       trigger: "#" + triggerDivId,
       start: "center center",
       end: "+=200 center",
       // markers: true,
       pin: true,
-      onEnter: () => {
-        lottieAnime.loop = false;
-        lottieAnime.playSegments([25, 150], true);
-      },
+      onEnter: playMainSegment,
+      onEnterBack: playMainSegment,
     });
   };
 
