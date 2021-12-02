@@ -3,7 +3,8 @@ export type AnimeName =
   | "about_back-end"
   | "about_language"
   | "project_tabatimer"
-  | "project_poyao-dot-wang";
+  | "project_poyao-dot-wang"
+  | "hero_bg";
 
 export interface ItemNav {
   text: string;

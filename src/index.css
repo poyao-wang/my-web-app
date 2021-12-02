@@ -3,7 +3,6 @@
   --color-secondary: #3298a0;
   --color-bg-main: #f8f8f8;
   --color-bg-gray: #cccccc;
-  --color-bg-nav: #309063;
   --color-white: #ffffff;
   --color-black: #000000;
   --color-light: #f3f3f3;
@@ -155,7 +154,7 @@ p {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 #main-container > section:first-of-type {
@@ -604,7 +603,6 @@ a {
   align-items: center;
   align-self: stretch;
   padding: 2.4rem;
-  background: var(--color-bg-nav);
   overflow: visible;
   z-index: 1;
 }
@@ -662,37 +660,42 @@ a {
   flex-direction: column;
   align-items: center;
   align-self: stretch;
-  height: 27.2rem;
-  background-size: 150rem auto;
-  background-position: bottom;
+  height: 40rem;
+  position: relative;
 }
 
 .section-hero h1 {
+  z-index: 1;
   margin: 0;
-  margin-top: 2.4rem;
+  margin-top: 8rem;
   color: var(--color-white);
 }
 
 .section-hero .p-h1 {
+  z-index: 1;
   color: var(--color-white);
+}
+
+.section-hero #hero_bg {
+  bottom: 0;
+  position: absolute;
+  width: 270rem;
 }
 
 @media screen and (min-width: 768px) {
   .section-hero {
-    height: 30.4rem;
+    height: 44.8rem;
   }
 
   .section-hero h1 {
     margin: 0;
     margin-top: 1.6rem;
-    color: var(--color-white);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .section-hero {
-    height: 44.6rem;
-    background-size: 250rem auto;
+    height: 63rem;
   }
 
   .section-hero h1 {
