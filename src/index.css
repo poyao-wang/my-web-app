@@ -664,11 +664,11 @@ a {
   position: relative;
 }
 
-.section-hero h1 {
+.section-hero #hero_poyao-wang {
   z-index: 1;
   margin: 0;
   margin-top: 8rem;
-  color: var(--color-white);
+  height: 6.4rem;
 }
 
 .section-hero .p-h1 {
@@ -687,9 +687,10 @@ a {
     height: 44.8rem;
   }
 
-  .section-hero h1 {
+  .section-hero #hero_poyao-wang {
     margin: 0;
     margin-top: 1.6rem;
+    height: 8.8rem;
   }
 }
 
@@ -698,8 +699,9 @@ a {
     height: 63rem;
   }
 
-  .section-hero h1 {
+  .section-hero #hero_poyao-wang {
     margin-top: 5.6rem;
+    height: 13.6rem;
   }
 }
 

@@ -14,6 +14,8 @@ const loadAnimationData = (AnimeName: AnimeName) => {
       return require("../assets/animations/project_poyao-dot-wang.json");
     case "hero_bg":
       return require("../assets/animations/hero_bg.json");
+    case "hero_poyao-wang":
+      return require("../assets/animations/hero_poyao-wang.json");
   }
 };
 

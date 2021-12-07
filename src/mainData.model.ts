@@ -4,7 +4,8 @@ export type AnimeName =
   | "about_language"
   | "project_tabatimer"
   | "project_poyao-dot-wang"
-  | "hero_bg";
+  | "hero_bg"
+  | "hero_poyao-wang";
 
 export interface ItemNav {
   text: string;

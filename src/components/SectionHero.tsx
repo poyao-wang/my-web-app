@@ -13,7 +13,7 @@ const SectionHero: React.FC = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const lottieAnime: AnimationItem = lottie.loadAnimation({
+    const bgAnime: AnimationItem = lottie.loadAnimation({
       container: document.getElementById("hero_bg")!,
       animationData: animeFns.loadAnimationData("hero_bg"),
       renderer: "svg",
@@ -22,10 +22,18 @@ const SectionHero: React.FC = () => {
       initialSegment: [0, 15],
     });
 
-    lottieAnime.addEventListener("complete", (e) => {
-      lottieAnime.loop = false;
+    const poyaoWangAnime: AnimationItem = lottie.loadAnimation({
+      container: document.getElementById("hero_poyao-wang")!,
+      animationData: animeFns.loadAnimationData("hero_poyao-wang"),
+      renderer: "svg",
+      loop: false,
+      autoplay: true,
+    });
+
+    bgAnime.addEventListener("complete", (e) => {
+      bgAnime.loop = false;
       setTimeout(() => {
-        lottieAnime.playSegments([16, 34]);
+        bgAnime.playSegments([16, 34]);
       }, 4000);
     });
 
@@ -52,7 +60,7 @@ const SectionHero: React.FC = () => {
     <section id="page-home__section-hero" className="section-hero">
       <NavBar />
       <div id="hero_bg" />
-      <h1>Poyao Wang</h1>
+      <div id="hero_poyao-wang"></div>
       <p className="p-h1">{t("sectionHero.subtitle")}</p>
     </section>
   );
