@@ -18,8 +18,7 @@ const SectionHero: React.FC = () => {
       animationData: animeFns.loadAnimationData("hero_bg"),
       renderer: "svg",
       loop: false,
-      autoplay: true,
-      initialSegment: [0, 15],
+      autoplay: false,
     });
 
     const poyaoWangAnime: AnimationItem = lottie.loadAnimation({
@@ -30,24 +29,48 @@ const SectionHero: React.FC = () => {
       autoplay: true,
     });
 
-    bgAnime.addEventListener("complete", (e) => {
-      bgAnime.loop = false;
-      setTimeout(() => {
-        bgAnime.playSegments([16, 34]);
-      }, 4000);
-    });
+    const tlAfterPoyaoWang = gsap
+      .timeline()
+      .from("#hero_p-h1", {
+        delay: 1.1,
+        duration: 1.5,
+        ease: "power4.out",
+        y: 20,
+        opacity: 0,
+      })
+      .from(
+        ".nav-bar .icon_logo, .nav-bar .nav-bar__translate",
+        {
+          duration: 1.5,
+          ease: "power4.out",
+          y: 20,
+          opacity: 0,
+        },
+        "<0.2"
+      )
+      .from(
+        ".nav-bar .item-nav",
+        {
+          duration: 0.75,
+          ease: "power4.out",
+          y: 20,
+          opacity: 0,
+          stagger: 0.05,
+        },
+        "<+=0.1"
+      );
 
-    const tl = gsap
+    const tlBgScroll = gsap
       .timeline()
       .set("#hero_bg", { transformOrigin: "bottom" })
       .to("#hero_bg", {
         duration: 0.5,
-        scale: 1.1,
-        y: 30,
+        scale: 1.05,
+        y: 15,
       });
 
     ScrollTrigger.create({
-      animation: tl,
+      animation: tlBgScroll,
       trigger: "#page-home__section-hero",
       start: "top+=30 top",
       end: "bottom top",
@@ -61,7 +84,9 @@ const SectionHero: React.FC = () => {
       <NavBar />
       <div id="hero_bg" />
       <div id="hero_poyao-wang"></div>
-      <p className="p-h1">{t("sectionHero.subtitle")}</p>
+      <p id="hero_p-h1" className="p-h1">
+        {t("sectionHero.subtitle")}
+      </p>
     </section>
   );
 };
