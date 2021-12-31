@@ -38,8 +38,7 @@ const SectionSkills: React.FC = () => {
 
     tl.current = gsap
       .timeline({ defaults: { duration: 0.5, ease: "back.out(1.7)" } })
-      .from(containerRefMid2.current, vars)
-      .from(containerRefMid1.current, vars, position)
+      .from(containerRefMid1.current, vars)
       .from(containerRefLft1.current, vars, position)
       .from(containerRefLtr1.current, vars, position)
       .from(containerRefLft2.current, vars, position)
