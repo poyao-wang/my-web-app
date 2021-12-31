@@ -76,10 +76,9 @@ const SectionProjects: React.FC = () => {
 
     ScrollTrigger.create({
       trigger: "#" + triggerDivId,
-      start: "center center",
-      end: "+=200 center",
+      start: "30% center",
+      end: "60% center",
       // markers: true,
-      pin: true,
       onEnter: playMainSegment,
       onEnterBack: playMainSegment,
     });
