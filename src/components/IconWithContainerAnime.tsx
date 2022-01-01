@@ -1,5 +1,4 @@
 import React from "react";
-import { AnimeName } from "../mainData.model";
 
 type AvailableSectionType = "about" | "project";
 

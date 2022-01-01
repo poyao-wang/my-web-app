@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import lottie from "lottie-web";
 
 import * as TypeMainData from "../mainData.model";
 import ItemAbout from "./ItemAbout";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import lottie, { AnimationItem } from "lottie-web";
 import { AnimeName } from "../mainData.model";
 import animeFns from "../utils/animeFns";
 
@@ -26,15 +24,15 @@ const SectionAbout: React.FC = () => {
   };
 
   useEffect(() => {
-    const animeLt = createLottieAnime(
+    createLottieAnime(
       "about-anime-0",
       sectionAbout.aboutItems[0].iconAnimeName
     );
-    const animeMi = createLottieAnime(
+    createLottieAnime(
       "about-anime-1",
       sectionAbout.aboutItems[1].iconAnimeName
     );
-    const animeRt = createLottieAnime(
+    createLottieAnime(
       "about-anime-2",
       sectionAbout.aboutItems[2].iconAnimeName
     );

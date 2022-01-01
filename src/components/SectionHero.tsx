@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslation } from "react-i18next";
-import lottie, { AnimationItem } from "lottie-web";
+import lottie from "lottie-web";
 
 import NavBar from "./NavBar";
 import animeFns from "../utils/animeFns";
@@ -14,7 +14,7 @@ const SectionHero: React.FC = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const poyaoWangAnime: AnimationItem = lottie.loadAnimation({
+    lottie.loadAnimation({
       container: document.getElementById("hero_poyao-wang")!,
       animationData: animeFns.loadAnimationData("hero_poyao-wang"),
       renderer: "svg",
@@ -22,7 +22,7 @@ const SectionHero: React.FC = () => {
       autoplay: true,
     });
 
-    const tlAfterPoyaoWang = gsap
+    gsap
       .timeline()
       .from("#hero_p-h1", {
         delay: 1.1,
