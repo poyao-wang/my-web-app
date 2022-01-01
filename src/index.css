@@ -845,8 +845,8 @@ a {
   align-items: center;
   align-self: stretch;
   height: 35.2rem;
-  background-size: 150rem auto;
-  background-position: top;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-contact h2 {
@@ -857,6 +857,18 @@ a {
 
 .section-contact .p-h2 {
   color: var(--color-white);
+}
+
+.section-contact .section-contact__contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  z-index: 1;
+}
+
+.section-contact #contact-bg {
+  position: absolute;
 }
 
 .contact-items {
