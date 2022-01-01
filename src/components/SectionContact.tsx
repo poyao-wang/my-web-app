@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslation } from "react-i18next";
 
 import * as TypeMainData from "../mainData.model";
@@ -11,6 +13,27 @@ const SectionContact: React.FC = () => {
   const sectionContact: TypeMainData.SectionContacts = t("sectionContacts", {
     returnObjects: true,
   });
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tlBgScroll = gsap
+      .timeline()
+      .set("#contact-bg", { transformOrigin: "top" })
+      .from("#contact-bg", {
+        duration: 0.5,
+        scale: 1.1,
+        y: -15,
+      });
+
+    ScrollTrigger.create({
+      animation: tlBgScroll,
+      trigger: "#page-home__section-contact",
+      start: "top-=30 bottom",
+      end: "bottom bottom",
+      // markers: true,
+      scrub: 1,
+    });
+  }, []);
 
   return (
     <section id="page-home__section-contact" className="section-contact">
