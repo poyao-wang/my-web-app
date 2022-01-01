@@ -605,7 +605,7 @@ a {
   align-self: stretch;
   padding: 2.4rem;
   overflow: visible;
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav-bar__translate {
@@ -665,19 +665,25 @@ a {
   position: relative;
 }
 
-.section-hero #hero_poyao-wang {
+.section-hero .section-hero__contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
   z-index: 1;
+}
+
+.section-hero #hero_poyao-wang {
   margin: 0;
   margin-top: 6rem;
   height: 8.4rem;
 }
 
 .section-hero .p-h1 {
-  z-index: 1;
   color: var(--color-white);
 }
 
-.section-hero #hero_bg {
+.section-hero #hero-bg {
   bottom: 0;
   position: absolute;
   width: 270rem;

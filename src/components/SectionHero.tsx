@@ -6,20 +6,13 @@ import lottie, { AnimationItem } from "lottie-web";
 
 import NavBar from "./NavBar";
 import animeFns from "../utils/animeFns";
+import SvgBg from "./SvgBg";
 
 const SectionHero: React.FC = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    const bgAnime: AnimationItem = lottie.loadAnimation({
-      container: document.getElementById("hero_bg")!,
-      animationData: animeFns.loadAnimationData("hero_bg"),
-      renderer: "svg",
-      loop: false,
-      autoplay: false,
-    });
 
     const poyaoWangAnime: AnimationItem = lottie.loadAnimation({
       container: document.getElementById("hero_poyao-wang")!,
@@ -62,8 +55,8 @@ const SectionHero: React.FC = () => {
 
     const tlBgScroll = gsap
       .timeline()
-      .set("#hero_bg", { transformOrigin: "bottom" })
-      .to("#hero_bg", {
+      .set("#hero-bg", { transformOrigin: "bottom" })
+      .to("#hero-bg", {
         duration: 0.5,
         scale: 1.05,
         y: 15,
@@ -82,11 +75,15 @@ const SectionHero: React.FC = () => {
   return (
     <section id="page-home__section-hero" className="section-hero">
       <NavBar />
-      <div id="hero_bg" />
-      <div id="hero_poyao-wang"></div>
-      <p id="hero_p-h1" className="p-h1">
-        {t("sectionHero.subtitle")}
-      </p>
+      <div id="hero-bg">
+        <SvgBg.Top />
+      </div>
+      <div className="section-hero__contents">
+        <div id="hero_poyao-wang"></div>
+        <p id="hero_p-h1" className="p-h1">
+          {t("sectionHero.subtitle")}
+        </p>
+      </div>
     </section>
   );
 };
