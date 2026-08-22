@@ -4,18 +4,18 @@
 
 ## 快速修正(分鐘級)
 
-- [ ] 關閉 [src/i18n.js](src/i18n.js) 的 `debug: true`(正式環境 console 太吵)
-- [ ] 修正 [public/index.html](public/index.html) 的 `og:url`:`poyao-wang.web.app` → `poyao.wang`,順手補 `<link rel="canonical" href="https://poyao.wang/" />`
+- [x] 關閉 [src/i18n.js](src/i18n.js) 的 `debug: true`(正式環境 console 太吵)
+- [x] 修正 [public/index.html](public/index.html) 的 `og:url`:`poyao-wang.web.app` → `poyao.wang`,順手補 `<link rel="canonical" href="https://poyao.wang/" />`
 
 ## 本機環境(重啟的第一步)
 
-- [ ] `npm install`(4 年沒裝,留意 peer dependency 警告)
-- [ ] 用 `NODE_OPTIONS=--openssl-legacy-provider npm start` 跑起 dev server,確認本機還能開發(webpack 4 在 Node 17+ 需要 workaround)
+- [x] `npm install`(4 年沒裝,留意 peer dependency 警告)
+- [x] 用 `NODE_OPTIONS=--openssl-legacy-provider npm start` 跑起 dev server,確認本機還能開發(webpack 4 在 Node 17+ 需要 workaround)
 
 ## 小整修(小時級)
 
-- [ ] 決定 react-router-dom 去留:只有一條 `/` 路由,其實可直接 render `PageHome`
-- [ ] 自訂 404 頁(目前是 Firebase 預設頁;單頁網站影響不大,可順手做)
+- [x] 決定 react-router-dom 去留:只有一條 `/` 路由,其實可直接 render `PageHome` → 已移除 react-router-dom(含 @types),App.tsx 直接 render
+- [x] 自訂 404 頁(目前是 Firebase 預設頁;單頁網站影響不大,可順手做) → `public/404.html`,Firebase Hosting 自動採用
 
 ## 大工程(候選)
 
