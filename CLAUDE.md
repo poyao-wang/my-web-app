@@ -6,7 +6,7 @@ Poyao Wang 的個人作品集網站(https://poyao.wang),單頁 React app,部署�
 Firebase Hosting(專案 `poyao-wang`)。2020-04 用 Create React App 建立,
 2022-02 之後閒置約四年半,2026-08 起重啟維護。
 
-技術棧是 2021 年代的:CRA 4.0.3、React 17、TypeScript 4.4、react-router-dom v5。
+技術棧是 2021 年代的:CRA 4.0.3、React 17、TypeScript 4.4。
 owner 正在重新熟悉 TypeScript——改動保持小、跟既有 pattern 一致,大改前先討論。
 
 ## 文件分工
@@ -24,7 +24,9 @@ owner 正在重新熟悉 TypeScript——改動保持小、跟既有 pattern 一
   會撞 `error:0308010C:digital envelope routines::unsupported`,需加
   `NODE_OPTIONS=--openssl-legacy-provider`
 - 部署:`npm run build` 後 `firebase deploy`(firebase.json 伺服 `build/`);
-  firebase-tools 不是 devDependency,用全域或 `npx`
+  firebase-tools 不是 devDependency,用全域或 `npx`。登入憑證在本機
+  (2026-08-22 重新授權過),失效時 `npx firebase-tools login --no-localhost`
+  走網頁拿 authorization code
 - 目前沒有任何測試檔;`npm test` 是 CRA 內建 jest(watch 模式,`CI=true` 跑單次)
 
 ## 資料夾結構
@@ -33,6 +35,7 @@ owner 正在重新熟悉 TypeScript——改動保持小、跟既有 pattern 一
 public/         靜態資源(build 原樣拷貝)
   locales/        en/ja/zh translation.json = 翻譯檔 + 網站內容來源
   assets/         圖片
+  404.html        自訂 404 頁(Firebase Hosting 自動採用根目錄的 404.html)
 src/
   components/     Section* / NavBar / …(單頁由 PageHome 組合五個 section)
   assets/         Lottie 動畫 JSON、背景 SVG
@@ -61,8 +64,8 @@ docs/           維護文件:todo.md
 - **樣式**:只有一份全域 `src/index.css`,BEM-ish class(`section-skills`、
   `skill-items__col`),section id 如 `page-home__section-skills`。改版面幾乎一定
   動這個檔;RWD 靠 `mobile-hide` 之類的 class。
-- **Routing 是裝飾用的**:react-router-dom v5 在 App.tsx 只有一條 `/` 路由 render
-  PageHome,實質上可以直接 render。
+- **沒有 router**:App.tsx 直接 render `PageHome`(2026-08 移除了裝飾用的
+  react-router-dom);404 頁交給 `public/404.html`,不進 React。
 
 ## Log 格式
 
@@ -86,10 +89,9 @@ docs/           維護文件:todo.md
 
 - Node 17+ 跑 webpack 4 的 OpenSSL 問題見「環境」,workaround 是
   `NODE_OPTIONS=--openssl-legacy-provider`,治本是遷移 Vite(見 docs/todo.md)
-- `public/index.html` 的 `og:url` 指向 `poyao-wang.web.app` 而非 `poyao.wang`,
-  且沒有 `<link rel="canonical">`;Firebase 給的兩個預設網域(`*.web.app`、
-  `*.firebaseapp.com`)和自訂網域是同一個部署、不互相轉址,SEO 會被拆分
-  (修法已列 docs/todo.md)
+- Firebase 給的兩個預設網域(`*.web.app`、`*.firebaseapp.com`)和自訂網域
+  `poyao.wang` 是同一個部署、不互相轉址——對外一律用 `poyao.wang`;
+  og:url / canonical 的 SEO 拆分問題已於 2026-08-22 修正並部署上線
 - CRA(create-react-app)已終止維護,React 17 / TS 4.4 全是 2021 年版本——升級
   相關決策見 docs/todo.md「大工程」區塊,動手前先跟 owner 確認範圍
 
