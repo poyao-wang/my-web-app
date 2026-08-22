@@ -10,29 +10,34 @@ import SvgBg from "./SvgBg";
 const SectionContact: React.FC = () => {
   const { t } = useTranslation();
 
-  const sectionContact: TypeMainData.SectionContacts = t("sectionContacts", {
+  const sectionContact = t("sectionContacts", {
     returnObjects: true,
-  });
+  }) as TypeMainData.SectionContacts;
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    const tlBgScroll = gsap
-      .timeline()
-      .set("#contact-bg", { transformOrigin: "top" })
-      .from("#contact-bg", {
-        duration: 0.5,
-        scale: 1.1,
-        y: -15,
-      });
 
-    ScrollTrigger.create({
-      animation: tlBgScroll,
-      trigger: "#page-home__section-contact",
-      start: "top-=30 bottom",
-      end: "bottom bottom",
-      // markers: true,
-      scrub: 1,
+    const ctx = gsap.context(() => {
+      const tlBgScroll = gsap
+        .timeline()
+        .set("#contact-bg", { transformOrigin: "top" })
+        .from("#contact-bg", {
+          duration: 0.5,
+          scale: 1.1,
+          y: -15,
+        });
+
+      ScrollTrigger.create({
+        animation: tlBgScroll,
+        trigger: "#page-home__section-contact",
+        start: "top-=30 bottom",
+        end: "bottom bottom",
+        // markers: true,
+        scrub: 1,
+      });
     });
+
+    return () => ctx.revert();
   }, []);
 
   return (

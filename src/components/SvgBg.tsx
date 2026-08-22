@@ -1,5 +1,5 @@
-import { ReactComponent as Btm } from "../assets/svgs/bg-btm.svg";
-import { ReactComponent as Top } from "../assets/svgs/bg-top.svg";
+import Btm from "../assets/svgs/bg-btm.svg?react";
+import Top from "../assets/svgs/bg-top.svg?react";
 
 const SvgBg = {
   Btm: () => <Btm className="svg-bg" />,

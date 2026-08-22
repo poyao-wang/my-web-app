@@ -2,7 +2,7 @@ import React, { RefObject } from "react";
 import Icon from "./Icon";
 
 interface IconWithContainerProps {
-  iconContainerDivRef?: RefObject<HTMLDivElement>;
+  iconContainerDivRef?: RefObject<HTMLDivElement | null>;
   iconSrc: string;
   bgUrl?: string;
   type: "skill" | "project" | "contact";

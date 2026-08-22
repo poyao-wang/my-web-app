@@ -1,21 +1,29 @@
 import { AnimeName } from "../mainData.model";
 
-const loadAnimationData = (AnimeName: AnimeName) => {
-  switch (AnimeName) {
+import aboutBackEnd from "../assets/animations/about_back-end.json";
+import aboutFrontEnd from "../assets/animations/about_front-end.json";
+import aboutLanguage from "../assets/animations/about_language.json";
+import projectTabatimer from "../assets/animations/project_tabatimer.json";
+import projectPoyaoDotWang from "../assets/animations/project_poyao-dot-wang.json";
+import heroBg from "../assets/animations/hero_bg.json";
+import heroPoyaoWang from "../assets/animations/hero_poyao-wang.json";
+
+const loadAnimationData = (name: AnimeName) => {
+  switch (name) {
     case "about_back-end":
-      return require("../assets/animations/about_back-end.json");
+      return aboutBackEnd;
     case "about_front-end":
-      return require("../assets/animations/about_front-end.json");
+      return aboutFrontEnd;
     case "about_language":
-      return require("../assets/animations/about_language.json");
+      return aboutLanguage;
     case "project_tabatimer":
-      return require("../assets/animations/project_tabatimer.json");
+      return projectTabatimer;
     case "project_poyao-dot-wang":
-      return require("../assets/animations/project_poyao-dot-wang.json");
+      return projectPoyaoDotWang;
     case "hero_bg":
-      return require("../assets/animations/hero_bg.json");
+      return heroBg;
     case "hero_poyao-wang":
-      return require("../assets/animations/hero_poyao-wang.json");
+      return heroPoyaoWang;
   }
 };
 

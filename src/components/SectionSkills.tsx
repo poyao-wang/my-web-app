@@ -9,8 +9,6 @@ import IconWithContainer from "./IconWithContainer";
 const SectionSkills: React.FC = () => {
   const { t } = useTranslation();
 
-  const tl = useRef<gsap.core.Timeline>();
-
   const sectionSkillRef = useRef<HTMLDivElement>(null);
   const containerRefLft1 = useRef<HTMLDivElement>(null);
   const containerRefLft2 = useRef<HTMLDivElement>(null);
@@ -22,9 +20,9 @@ const SectionSkills: React.FC = () => {
   const containerRefRht2 = useRef<HTMLDivElement>(null);
   const containerRefRtr1 = useRef<HTMLDivElement>(null);
 
-  const sectionSkills: TypeMainData.SectionSkills = t("sectionSkills", {
+  const sectionSkills = t("sectionSkills", {
     returnObjects: true,
-  });
+  }) as TypeMainData.SectionSkills;
 
   const vars: gsap.TweenVars = {
     opacity: 0,
@@ -36,26 +34,30 @@ const SectionSkills: React.FC = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    tl.current = gsap
-      .timeline({ defaults: { duration: 0.5, ease: "back.out(1.7)" } })
-      .from(containerRefMid1.current, vars)
-      .from(containerRefLft1.current, vars, position)
-      .from(containerRefLtr1.current, vars, position)
-      .from(containerRefLft2.current, vars, position)
-      .from(containerRefMid3.current, vars, position)
-      .from(containerRefRht2.current, vars, position)
-      .from(containerRefRtr1.current, vars, position)
-      .from(containerRefRht1.current, vars, position);
+    const ctx = gsap.context(() => {
+      const tl = gsap
+        .timeline({ defaults: { duration: 0.5, ease: "back.out(1.7)" } })
+        .from(containerRefMid1.current, vars)
+        .from(containerRefLft1.current, vars, position)
+        .from(containerRefLtr1.current, vars, position)
+        .from(containerRefLft2.current, vars, position)
+        .from(containerRefMid3.current, vars, position)
+        .from(containerRefRht2.current, vars, position)
+        .from(containerRefRtr1.current, vars, position)
+        .from(containerRefRht1.current, vars, position);
 
-    ScrollTrigger.create({
-      animation: tl.current,
-      trigger: sectionSkillRef.current,
-      start: "80% bottom",
-      end: "80% 70%",
-      // markers: true,
-      scrub: 0.5,
-      toggleActions: "play pause resume reset",
+      ScrollTrigger.create({
+        animation: tl,
+        trigger: sectionSkillRef.current,
+        start: "80% bottom",
+        end: "80% 70%",
+        // markers: true,
+        scrub: 0.5,
+        toggleActions: "play pause resume reset",
+      });
     });
+
+    return () => ctx.revert();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (

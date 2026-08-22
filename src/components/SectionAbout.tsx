@@ -10,9 +10,9 @@ import animeFns from "../utils/animeFns";
 const SectionAbout: React.FC = () => {
   const { t } = useTranslation();
 
-  const sectionAbout: TypeMainData.SectionAbout = t("sectionAbout", {
+  const sectionAbout = t("sectionAbout", {
     returnObjects: true,
-  });
+  }) as TypeMainData.SectionAbout;
   const createLottieAnime = (animeDivId: string, animeName: AnimeName) => {
     return lottie.loadAnimation({
       container: document.getElementById(animeDivId)!,
@@ -24,18 +24,21 @@ const SectionAbout: React.FC = () => {
   };
 
   useEffect(() => {
-    createLottieAnime(
-      "about-anime-0",
-      sectionAbout.aboutItems[0].iconAnimeName
-    );
-    createLottieAnime(
-      "about-anime-1",
-      sectionAbout.aboutItems[1].iconAnimeName
-    );
-    createLottieAnime(
-      "about-anime-2",
-      sectionAbout.aboutItems[2].iconAnimeName
-    );
+    const animes = [
+      createLottieAnime(
+        "about-anime-0",
+        sectionAbout.aboutItems[0].iconAnimeName
+      ),
+      createLottieAnime(
+        "about-anime-1",
+        sectionAbout.aboutItems[1].iconAnimeName
+      ),
+      createLottieAnime(
+        "about-anime-2",
+        sectionAbout.aboutItems[2].iconAnimeName
+      ),
+    ];
+    return () => animes.forEach((anime) => anime.destroy());
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (

@@ -10,9 +10,9 @@ const NavBar: React.FC = (props) => {
   const { t, i18n } = useTranslation();
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const navItems: TypeMainData.ItemNav[] = t("navbar.navItems", {
+  const navItems = t("navbar.navItems", {
     returnObjects: true,
-  });
+  }) as TypeMainData.ItemNav[];
 
   const changeLangAndHideDropdown: (langCode: string) => void = (
     langCode: string

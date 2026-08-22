@@ -11,9 +11,9 @@ import animeFns from "../utils/animeFns";
 const SectionProjects: React.FC = () => {
   const { t } = useTranslation();
 
-  const sectionProjects: TypeMainData.SectionProjects = t("sectionProjects", {
+  const sectionProjects = t("sectionProjects", {
     returnObjects: true,
-  });
+  }) as TypeMainData.SectionProjects;
 
   const createLottieAnime = (
     animeDivId: string,
@@ -94,16 +94,24 @@ const SectionProjects: React.FC = () => {
       sectionProjects.projectItems[1].iconAnimeName
     );
 
-    const tl0 = createTimeLine("item-project-0", false);
-    const tl1 = createTimeLine("item-project-1", true);
-
     gsap.registerPlugin(ScrollTrigger);
 
-    createScrollTrigger("item-project-0", tl0, anime0);
-    createScrollTrigger("item-project-1", tl1, anime1);
+    const ctx = gsap.context(() => {
+      const tl0 = createTimeLine("item-project-0", false);
+      const tl1 = createTimeLine("item-project-1", true);
 
-    createScrollTriggerPin("item-project-0", anime0);
-    createScrollTriggerPin("item-project-1", anime1);
+      createScrollTrigger("item-project-0", tl0, anime0);
+      createScrollTrigger("item-project-1", tl1, anime1);
+
+      createScrollTriggerPin("item-project-0", anime0);
+      createScrollTriggerPin("item-project-1", anime1);
+    });
+
+    return () => {
+      ctx.revert();
+      anime0.destroy();
+      anime1.destroy();
+    };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
