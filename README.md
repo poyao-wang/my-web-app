@@ -2,7 +2,7 @@
 
 Poyao Wang 的個人作品集網站,單頁 React app,部署在 Firebase Hosting。
 2020-04 用 Create React App(含 TypeScript)建立,2022-02 之後閒置,
-2026-08 起重啟維護。
+2026-08 起重啟維護,同月從 CRA 遷移到 Vite。
 
 - 線上版:https://poyao.wang
 - 設計稿:[Figma](https://www.figma.com/file/tPiTGrs85heowM44lInapP/Poyao.Wang?node-id=2%3A2)
@@ -10,7 +10,7 @@ Poyao Wang 的個人作品集網站,單頁 React app,部署在 Firebase Hosting�
 
 ## 技術棧
 
-- React 17 + TypeScript 4.4(Create React App 4)
+- React 19 + TypeScript 5.9(Vite 8;2026-08 從 Create React App 4 遷移)
 - 動畫:GSAP(ScrollTrigger 捲動動畫)+ Lottie(hero/about/project 動畫)
 - 多語系:i18next,en / ja / zh 三語
 - 部署:Firebase Hosting(專案 `poyao-wang`)
@@ -22,12 +22,14 @@ my-web-app/
 ├── README.md
 ├── CLAUDE.md                       給 Claude Code 的操作指引
 ├── log.md                          維護 log(最新在檔尾)
+├── index.html                      Vite 入口 HTML(SEO meta 都在這)
+├── vite.config.ts                  Vite 設定(outDir: "build" 對接 firebase.json)
+├── eslint.config.js                ESLint flat config
 ├── docs/
 │   └── todo.md                     待辦清單
 ├── public/                         靜態資源(build 原樣拷貝)
 │   ├── locales/                    en/ja/zh translation.json = 翻譯檔 + 網站內容
-│   ├── assets/                     圖片
-│   └── index.html
+│   └── assets/                     圖片
 ├── src/
 │   ├── components/                 Section* / NavBar / PageHome …
 │   ├── assets/                     Lottie JSON、背景 SVG
@@ -50,17 +52,12 @@ my-web-app/
 git clone https://github.com/poyao-wang/my-web-app.git
 cd my-web-app
 npm install
-npm start        # dev server
+npm start        # dev server(http://localhost:5173)
 ```
 
-**注意:** CRA 4 的 webpack 4 在 Node 17+ 會噴
-`error:0308010C:digital envelope routines::unsupported`,要加環境變數:
-
-```bash
-NODE_OPTIONS=--openssl-legacy-provider npm start
-```
-
-治本(遷移 Vite)列在 `docs/todo.md`。
+其他指令:`npm run build`(tsc 型別檢查 + vite build,產出 `build/`)、
+`npm run preview` 本機預覽正式 build、`npm run typecheck`、`npm run lint`。
+需要 Node 20.19+(CRA 時代的 `--openssl-legacy-provider` workaround 已不需要)。
 
 ## 部署
 

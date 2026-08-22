@@ -4,9 +4,10 @@
 
 Poyao Wang 的個人作品集網站(https://poyao.wang),單頁 React app,部署在
 Firebase Hosting(專案 `poyao-wang`)。2020-04 用 Create React App 建立,
-2022-02 之後閒置約四年半,2026-08 起重啟維護。
+2022-02 之後閒置約四年半,2026-08 起重啟維護,同月完成 CRA → Vite 遷移。
 
-技術棧是 2021 年代的:CRA 4.0.3、React 17、TypeScript 4.4。
+技術棧:Vite 8、React 19、TypeScript 5.9(2026-08-22 從 CRA 4 / React 17 /
+TS 4.4 一次到位升級)。
 owner 正在重新熟悉 TypeScript——改動保持小、跟既有 pattern 一致,大改前先討論。
 
 ## 文件分工
@@ -20,18 +21,22 @@ owner 正在重新熟悉 TypeScript——改動保持小、跟既有 pattern 一
 
 ## 環境
 
-- 本機 Node v25.8.1 —— webpack 4 時代的工具鏈在 Node 17+ 上 `npm start`/`npm run build`
-  會撞 `error:0308010C:digital envelope routines::unsupported`,需加
-  `NODE_OPTIONS=--openssl-legacy-provider`
-- 部署:`npm run build` 後 `firebase deploy`(firebase.json 伺服 `build/`);
-  firebase-tools 不是 devDependency,用全域或 `npx`。登入憑證在本機
-  (2026-08-22 重新授權過),失效時 `npx firebase-tools login --no-localhost`
-  走網頁拿 authorization code
-- 目前沒有任何測試檔;`npm test` 是 CRA 內建 jest(watch 模式,`CI=true` 跑單次)
+- 本機 Node v25.8.1(Vite 8 需要 Node 20.19+ / 22.12+)。CRA 時代
+  `NODE_OPTIONS=--openssl-legacy-provider` 的 workaround 已隨 2026-08-22 遷移移除,
+  指令直接跑即可;dev port 從 3000 改為 5173
+- 部署:`npm run build` 後 `firebase deploy`(firebase.json 伺服 `build/`,
+  Vite 的 `build.outDir` 也設 `build/` 對接);firebase-tools 不是 devDependency,
+  用全域或 `npx`。登入憑證在本機(2026-08-22 重新授權過),失效時
+  `npx firebase-tools login --no-localhost` 走網頁拿 authorization code
+- 沒有測試檔也沒有 test runner(jest / testing-library 隨 Vite 遷移移除);
+  檢查用 `npm run typecheck`(tsc)和 `npm run lint`(ESLint 10 flat config)
 
 ## 資料夾結構
 
 ```
+index.html      Vite 入口 HTML(SEO meta 都在這)
+vite.config.ts  Vite 設定(outDir: "build" 對接 firebase.json)
+eslint.config.js  ESLint 10 flat config
 public/         靜態資源(build 原樣拷貝)
   locales/        en/ja/zh translation.json = 翻譯檔 + 網站內容來源
   assets/         圖片
@@ -59,7 +64,10 @@ docs/           維護文件:todo.md
   新增動畫 = 放 JSON + 加 case + 加 union member + locale 引用。
 - **GSAP 捲動動畫**:每個 Section 元件在 `useEffect` 建 `gsap.timeline` 掛
   `ScrollTrigger`(多為 `scrub`),refs 由父元件往下傳(如 `IconWithContainer` 的
-  ref 是 props 傳入)。`useEffect` 的 `[]` deps + `eslint-disable` 是刻意的,
+  ref 是 props 傳入)。React 19 起 timeline 包在 `gsap.context()` 裡、cleanup 做
+  `ctx.revert()`(lottie 實例則 `destroy()`)——StrictMode 在 dev 會
+  mount→cleanup→mount,沒有 cleanup 會疊出雙倍 ScrollTrigger / lottie;production
+  單一 mount 不受影響。`useEffect` 的 `[]` deps + `eslint-disable` 是刻意的,
   timeline 只在 mount 建一次。
 - **樣式**:只有一份全域 `src/index.css`,BEM-ish class(`section-skills`、
   `skill-items__col`),section id 如 `page-home__section-skills`。改版面幾乎一定
@@ -87,13 +95,16 @@ docs/           維護文件:todo.md
 
 ## 踩坑紀錄
 
-- Node 17+ 跑 webpack 4 的 OpenSSL 問題見「環境」,workaround 是
-  `NODE_OPTIONS=--openssl-legacy-provider`,治本是遷移 Vite(見 docs/todo.md)
+- CRA 時代已結束:2026-08-22 遷移 Vite 8 + React 19 + TS 5.9 + i18next 26,
+  全新 lockfile 讓 158 個 Dependabot alert(全屬 react-scripts transitive deps)
+  一次消失。遺留的升級決策(JS bundle 瘦身、TS 7)見 docs/todo.md「大工程」
+- macOS 的 AirPlay Receiver 占用 5000 port——Firebase Hosting emulator 起不來時
+  會自動改跳 5002,記得 `curl http://127.0.0.1:5002`(或去系統設定關 AirPlay)
+- `npm run build` 的兩個警告是已知項目:lottie-web 內部用 `eval`(套件本身行為)、
+  chunk > 500 kB(未壓縮約 1.1 MB,瘦身列在 docs/todo.md,別誤當遷移回歸)
 - Firebase 給的兩個預設網域(`*.web.app`、`*.firebaseapp.com`)和自訂網域
   `poyao.wang` 是同一個部署、不互相轉址——對外一律用 `poyao.wang`;
   og:url / canonical 的 SEO 拆分問題已於 2026-08-22 修正並部署上線
-- CRA(create-react-app)已終止維護,React 17 / TS 4.4 全是 2021 年版本——升級
-  相關決策見 docs/todo.md「大工程」區塊,動手前先跟 owner 確認範圍
 
 ## 溝通
 
